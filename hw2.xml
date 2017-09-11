@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<?xml-stylesheet type = "text/css" href = "hw2.css" ?>
+
+<!-- Kristian Reyes 9/10/2017 -->
+
+<ccsf>
+	<course id="cnit32111">
+		<cnit131>Internet &amp; Intro to HTML</cnit131>
+		<instructor>Helen Ross</instructor>
+	</course>
+	<course id="cnit32123">
+		<cnit131a>XML &amp; JSON</cnit131a>
+		<instructor>Claudia Da Silva</instructor>
+	</course>
+	<course id="cnit32145">
+		<cnit132>Intermediate HTML &amp; CSS</cnit132>
+		<instructor>Anthony Steward</instructor>
+	</course>
+	<course id="cnit32167">
+		<cnit133>Javascript</cnit133>
+		<instructor>Persephone Rodriguez</instructor>
+	</course>
+</ccsf>
