@@ -1,0 +1,17 @@
+body	{ background-color:#F3F3F3;}
+
+h1		{ color:#0000FF; }
+
+subs	{ width:250px; background:orange; }
+
+title	{ display:block; color:maroon; font:bold 36pt;}
+
+desc	{ display:block; color:maroon; font:18pt;	}
+
+sub	{ display:block; padding:5px; border-bottom:1px solid maroon; font:12pt monospace; background:yellow;	}
+
+plus	{ background:maroon;color:white; padding:5px; font:bold 12pt monospace; }
+
+table	{ border-collapse: collapse; border: 1 px solid black; }
+
+th, td { padding: 15px; text-align: left; }
