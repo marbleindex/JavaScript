@@ -1,0 +1,9 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<note  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hw3.xsd" >
+
+  <to>Claudia</to>
+  <from>Janet</from>
+  <heading>CNIT131A Class</heading>
+  <body>We have started studying XML Schemas and DTDs</body>
+</note>
