@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<!-- XML in easy steps - Page 99. -->
+
+<?xml-stylesheet type = "text/xsl" href = "value-of.xsl" ?>
+
+<car:doc
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation = "http://www.ineasysteps.com/xsd cars.xsd"
+xmlns:car = "http://www.ineasysteps.com/xsd" >
+
+	<car:item id = "corvette">
+		<car:make>Chevrolet</car:make>
+		<car:model>Corvette</car:model>
+		<car:ltr>6.0</car:ltr>
+		<car:cyl>8</car:cyl>
+		<car:hp>400</car:hp>
+		<car:price>53000</car:price>
+	</car:item>
+
+	<car:item id = "viper">
+		<car:make>Dodge</car:make>
+		<car:model>Viper</car:model>
+		<car:ltr>8.3</car:ltr>
+		<car:cyl>10</car:cyl>
+		<car:hp>510</car:hp>
+		<car:price>85000</car:price>
+	</car:item>
+
+
+	<car:item id = "solstice">
+		<car:make>Pontiac</car:make>
+		<car:model>Solstice</car:model>
+		<car:ltr>2.4</car:ltr>
+		<car:cyl>4</car:cyl>
+		<car:hp>177</car:hp>
+		<car:price>22000</car:price>
+	</car:item>
+
+</car:doc>
