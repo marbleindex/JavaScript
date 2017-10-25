@@ -1,40 +1,49 @@
 <?xml version = "1.0" encoding = "UTF-8" ?>
 
-<!-- XML in easy steps - Page 99. -->
+<!-- XML in easy steps - Page 100. -->
 
-<?xml-stylesheet type = "text/xsl" href = "value-of.xsl" ?>
+<xsl:stylesheet version = "1.0"
+xmlns:xsl = "http://www.w3.org/1999/XSL/Transform"
+xmlns:c = "http://www.ineasysteps.com/xsd" >
 
-<car:doc
-xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation = "http://www.ineasysteps.com/xsd cars.xsd"
-xmlns:car = "http://www.ineasysteps.com/xsd" >
+<xsl:output method="html" encoding="UTF-8" indent="yes"/>
 
-	<car:item id = "corvette">
-		<car:make>Chevrolet</car:make>
-		<car:model>Corvette</car:model>
-		<car:ltr>6.0</car:ltr>
-		<car:cyl>8</car:cyl>
-		<car:hp>400</car:hp>
-		<car:price>53000</car:price>
-	</car:item>
+<xsl:template match = "c:doc">
 
-	<car:item id = "viper">
-		<car:make>Dodge</car:make>
-		<car:model>Viper</car:model>
-		<car:ltr>8.3</car:ltr>
-		<car:cyl>10</car:cyl>
-		<car:hp>510</car:hp>
-		<car:price>85000</car:price>
-	</car:item>
+<html> <head><title>XSL Output</title> </head> <body>
 
+<!-- pg 102 -->
+<table style = "width:450px">
+<tr style = "color:white; background:blue" >
+  <th>Make</th> <th>Model</th> <th>Liters</th>
+  <th>Cyls</th> <th>HP</th> <th>$</th></tr>
 
-	<car:item id = "solstice">
-		<car:make>Pontiac</car:make>
-		<car:model>Solstice</car:model>
-		<car:ltr>2.4</car:ltr>
-		<car:cyl>4</car:cyl>
-		<car:hp>177</car:hp>
-		<car:price>22000</car:price>
-	</car:item>
+<xsl:for-each select = "c:item" >
+  <tr style = "color:navy;background:aqua;text-align:center">
+    <td>     <xsl:value-of select = "c:make" />  </td>
+    <td>     <xsl:value-of select = "c:model" />  </td>
+    <td>     <xsl:value-of select = "c:ltr" />  </td>
+    <td>     <xsl:value-of select = "c:cyl" />  </td>
+    <td>     <xsl:value-of select = "c:hp" />  </td>
+    <td>     <xsl:value-of select = "c:price" />  </td>
+  </tr>
+</xsl:for-each>
 
-</car:doc>
+</table>
+<!-- pg 102 -->
+<ul style = "list-style-type:square;color:red">
+
+<li> <xsl:value-of select = "c:item/c:make" /> </li>
+<li> <xsl:value-of select = "c:item/c:model" /> </li>
+<li> <xsl:value-of select = "c:item/c:ltr" /> Liters </li>
+<li> <xsl:value-of select = "c:item/c:cyl" /> Cylinders</li>
+<li> <xsl:value-of select = "c:item/c:hp" /> Horsepower</li>
+<li> $ <xsl:value-of select = "c:item/c:price" /> </li>
+
+</ul>
+
+</body> </html>
+
+</xsl:template>
+
+</xsl:stylesheet>
