@@ -2,8 +2,8 @@
 
 <!-- XML in easy steps - Page 100. -->
 
-<xsl:stylesheet version = "1.0" 
-xmlns:xsl = "http://www.w3.org/1999/XSL/Transform" 
+<xsl:stylesheet version = "1.0"
+xmlns:xsl = "http://www.w3.org/1999/XSL/Transform"
 xmlns:c = "http://www.ineasysteps.com/xsd" >
 
 <xsl:output method="html" encoding="UTF-8" indent="yes"/>
@@ -12,16 +12,26 @@ xmlns:c = "http://www.ineasysteps.com/xsd" >
 
 <html> <head><title>XSL Output</title> </head> <body>
 
-<ul style = "list-style-type:square;color:red">
+<!-- pg 102 -->
+<table style = "width:450px">
+<tr style = "color:white; background:blue" >
+  <th>Make</th> <th>Model</th> <th>Liters</th>
+  <th>Cyls</th> <th>HP</th> <th>$</th></tr>
 
-<li> <xsl:value-of select = "c:item/c:make" /> </li>
-<li> <xsl:value-of select = "c:item/c:model" /> </li>
-<li> <xsl:value-of select = "c:item/c:ltr" /> Liters </li>
-<li> <xsl:value-of select = "c:item/c:cyl" /> Cylinders</li>
-<li> <xsl:value-of select = "c:item/c:hp" /> Horsepower</li>
-<li> $ <xsl:value-of select = "c:item/c:price" /> </li>
+<xsl:for-each select = "c:item" >
+  <tr style = "color:navy;background:aqua;text-align:center">
+    <td>     <xsl:value-of select = "c:make" />  </td>
+    <td>     <xsl:value-of select = "c:model" />  </td>
+    <td>     <xsl:value-of select = "c:ltr" />  </td>
+    <td>     <xsl:value-of select = "c:cyl" />  </td>
+    <td>     <xsl:value-of select = "c:hp" />  </td>
+    <td>     <xsl:value-of select = "c:price" />  </td>
+  </tr>
+</xsl:for-each>
 
-</ul> 
+</table>
+<!-- pg 102 -->
+
 
 </body> </html>
 
