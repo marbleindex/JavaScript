@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="abccompany.xsl" ?>
+
+<abccompany>
+	<emp>
+		<title>CEO</title>
+		<name>Bob Davis</name>
+		<dept>Board of Directors</dept>
+		<sal>500000</sal>
+		<year>1995</year>
+	</emp>
+	<emp>
+		<title>CFO</title>
+		<name>Bonnie Tyler</name>
+		<dept>Board of Directors</dept>
+		<sal>420000</sal>
+		<year>1995</year>
+	</emp>
+	<emp>
+		<title>Manager</title>
+		<name>Dolly Parton</name>
+		<dept>Marketing</dept>
+		<sal>170000</sal>
+		<year>1997</year>
+	</emp>
+	<emp>
+		<title>Web Developer</title>
+		<name>Gary Martin</name>
+		<dept>Marketing</dept>
+		<sal>95000</sal>
+		<year>1999</year>
+	</emp>
+	<emp>
+		<title>Manager</title>
+		<name>Lucy Smith</name>
+		<dept>Finance</dept>
+		<sal>172000</sal>
+		<year>1999</year>
+	</emp>
+	<emp>
+		<title>Assistant</title>
+		<name>Laura Taylor</name>
+		<dept>Finance</dept>
+		<sal>62000</sal>
+		<year>2000</year>
+	</emp>
+	<emp>
+		<title>Assistant</title>
+		<name>Joe Cocker</name>
+		<dept>Finance</dept>
+		<sal>65000</sal>
+		<year>1998</year>
+	</emp>
+</abccompany>
