@@ -1,0 +1,39 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<?xml-stylesheet type = "text/xsl" href = "hw5.xsl" ?>
+
+<stock:doc 
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation = "http://www.ineasysteps.com/xsd hw5.xsd"
+xmlns:stock = "http://www.ineasysteps.com/xsd" >
+
+	<stock:item id = "Microsoft">
+		<stock:symbol>MSN</stock:symbol>
+		<stock:price>44.80</stock:price>
+		<stock:ceo>John Doe</stock:ceo>
+	</stock:item>
+
+	<stock:item id = "Google">
+		<stock:symbol>GOGG</stock:symbol>
+		<stock:price>85.00</stock:price>
+		<stock:ceo>Liza None</stock:ceo>
+	</stock:item>
+
+	<stock:item id = "Yahoo">
+		<stock:symbol>YAHO</stock:symbol>
+		<stock:price>72.10</stock:price>
+		<stock:ceo>James Dean</stock:ceo>
+	</stock:item>
+
+	<stock:item id = "Apple">
+		<stock:symbol>APPL</stock:symbol>
+		<stock:price>93.20</stock:price>
+		<stock:ceo>Steve Gone</stock:ceo>
+	</stock:item>
+
+	<stock:item id = "LinkedIn">
+		<stock:symbol>LINK</stock:symbol>
+		<stock:price>54.00</stock:price>
+		<stock:ceo>Linka Link</stock:ceo>
+	</stock:item>	
+</stock:doc>

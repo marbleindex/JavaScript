@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<xsd:schema 
+xmlns:xsd = "http://www.w3.org/2001/XMLSchema"
+targetNamespace = "http://www.ineasysteps.com/xsd"
+xmlns:tns = "http://www.ineasysteps.com/xsd" >
+
+<!-- DECLARE ELEMENTS. -->
+
+<!-- Simple types. -->
+
+<xsd:element name = "symbol" 	type = "xsd:string" 	/>
+<xsd:element name = "price" 	type = "xsd:decimal"	/>
+<xsd:element name = "ceo" 	type = "xsd:string" 	/>
+
+
+<!-- Complex types. -->
+
+<xsd:element name = "doc"  	type = "tns:docType" 	/>
+<xsd:element name = "item" 	type = "tns:itemType"	/>
+
+
+<!-- DEFINE STRUCTURES. --> 
+
+<xsd:complexType name = "docType">
+	<xsd:sequence maxOccurs = "unbounded">
+		<xsd:element ref = "tns:item" 	/>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name = "itemType">
+	<xsd:sequence>
+		<xsd:element ref = "tns:symbol" 	/>
+		<xsd:element ref = "tns:price" 	/>
+		<xsd:element ref = "tns:ceo" 	/>
+	</xsd:sequence>
+	<xsd:attribute name = "id" type = "xsd:string" use = "required" />
+</xsd:complexType>
+
+</xsd:schema>
