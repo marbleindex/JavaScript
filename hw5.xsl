@@ -1,10 +1,13 @@
 <?xml version="1.0" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:template match="stock:doc" >
+<xsl:template match="/stock:doc" >
 <html>
-<body>
-<table border="2">
+	<head>
+		<title>Stock Prices Over $70 </title>
+	</head>
+	<body>
+	<table border="2">
 	<tr style="background-color:black" >
 		<th>Symbol</th>
 		<th>Price</th>
