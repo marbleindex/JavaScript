@@ -13,6 +13,7 @@
 		<th>Price</th>
 		<th>CEO</th>
 	</tr>
+	<!---
 			<xsl:for-each select = "stock:item" >
 				<xsl:if test = "stock:price > 70.00">
 				<xsl:choose>
@@ -41,6 +42,7 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:for-each>
+		-->
 	</table>
 </body>
 </html>
