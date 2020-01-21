@@ -1,2 +1,2 @@
 # marbleindex.github.io
-CCSF XML/JSON Course
+CCSF Intermediate HTML CSS Course
