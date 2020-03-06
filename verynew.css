@@ -1,0 +1,72 @@
+
+body {
+  background-color: yellow;
+}
+
+/* <body bgcolor="yellow" link="red" vlink="white"> */
+
+
+}
+
+p {
+  color: ##000000;
+   font-size: 40
+}
+
+.redlined { 
+	color: red; }
+
+
+h1 {
+  color: red;
+  text-align: center;
+
+}
+
+
+}
+
+h2 {
+	color: blue;
+	text-align: right;
+
+
+}
+
+h3 {
+	color: red;
+	text-align: right;
+
+}
+
+
+table {
+	background-color: cyan;
+	text-align: center;
+		border-spacing: 5px
+}
+tr, td {
+padding: 10px; 
+font-weight: bold;
+
+}
+
+
+}
+a:link {
+ color: red;
+
+  }
+
+a:visited {
+ color: white;
+
+  }
+
+p::first-letter { 
+
+	font-size: 40; 
+	font-style: italic;
+	font-weight: bold;
+
+
