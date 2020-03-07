@@ -3,26 +3,87 @@ body {
   background-color: yellow;
 }
 
-/* <body bgcolor="yellow" link="red" vlink="white"> */
-
-
-}
 
 p {
-  color: ##000000;
-   font-size: 40
+  color: #000000;
+   font-size: 16px;
 }
 
 .redlined { 
 	color: red; }
 
+@keyframes 
+{
+from {background: cyan;}
+to {background: green;}
+
+from{text-co}
+}
+
+@-webkit-keyframes tableux 
+{
+from {background: cyan;}
+to {background: green;}
+
+from {color: black;}
+to {color: white;}
+} 
+
+#tableanim
+{
+background:cyan;
+position:relative;
+-webkit-animation: tableux 5s; animation-fill-mode: forwards;
+
+} 
+
+@keyframes boxy
+{
+  0%   {background-color:brown; left:0px; top:0px;}
+  50%  {background-color:brown; left:calc(100% - 100px); top:0px;}
+  100% {background-color:brown; left:0px; top:0px;}
+}
+
+@-webkit-keyframes boxy
+{
+  0%   {background-color:brown; left:0px; top:0px;}
+  50%  {background-color:brown; left:calc(100% - 100px); top:0px;}
+  100% {background-color:brown; left:0px; top:0px;}
+}
+
+#box
+{
+width:100px;
+height:100px;
+background:brown;
+position:relative;
+-webkit-animation-name: boxy;
+-webkit-animation-duration: 8s;
+-webkit-animation-timing-function: linear;
+-webkit-animation-delay: 1s;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-direction: alternate;
+-webkit-animation-play-state: running;
+}
+
+
+table {
+	text-align: center;
+	border-spacing: 5px;
+}
+
+tr, td {
+padding: 10px; 
+font-weight: bold;
+
+}
+
+
+
 
 h1 {
   color: red;
   text-align: center;
-
-}
-
 
 }
 
@@ -39,20 +100,6 @@ h3 {
 
 }
 
-
-table {
-	background-color: cyan;
-	text-align: center;
-		border-spacing: 5px
-}
-tr, td {
-padding: 10px; 
-font-weight: bold;
-
-}
-
-
-}
 a:link {
  color: red;
 
@@ -65,8 +112,9 @@ a:visited {
 
 p::first-letter { 
 
-	font-size: 40; 
+	font-size: 40px; 
 	font-style: italic;
 	font-weight: bold;
 
+}
 
