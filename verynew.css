@@ -12,21 +12,22 @@ p {
 .redlined { 
 	color: red; }
 
-@keyframes 
-{
-from {background: cyan;}
-to {background: green;}
-
-from{text-co}
-}
-
-@-webkit-keyframes tableux 
+@keyframes tableux
 {
 from {background: cyan;}
 to {background: green;}
 
 from {color: black;}
 to {color: white;}
+}  
+
+@-webkit-keyframes tableux 
+{
+from {background:cyan;}
+to {background:green;}
+
+from {color:black;}
+to {color:white;}
 } 
 
 #tableanim
@@ -88,9 +89,11 @@ h1 {
 }
 
 h2 {
+	font-size: 30px;
 	color: blue;
+	font-style:italic;
 	text-align: right;
-
+	
 
 }
 
