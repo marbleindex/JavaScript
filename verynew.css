@@ -30,11 +30,21 @@ from {color:black;}
 to {color:white;}
 } 
 
+@-moz-keyframes tableux 
+{
+from {background:cyan;}
+to {background:green;}
+
+from {color:black;}
+to {color:white;}
+}
+
 #tableanim
 {
 background:cyan;
 position:relative;
 -webkit-animation: tableux 5s; animation-fill-mode: forwards;
+-moz-animation-name: tableux 5s; animation-fill-mode: forwards;
 
 } 
 
@@ -46,6 +56,13 @@ position:relative;
 }
 
 @-webkit-keyframes boxy
+{
+  0%   {background-color:brown; left:0px; top:0px;}
+  50%  {background-color:brown; left:calc(100% - 100px); top:0px;}
+  100% {background-color:brown; left:0px; top:0px;}
+}
+
+@-moz-keyframes boxy
 {
   0%   {background-color:brown; left:0px; top:0px;}
   50%  {background-color:brown; left:calc(100% - 100px); top:0px;}
@@ -65,6 +82,15 @@ position:relative;
 -webkit-animation-iteration-count: infinite;
 -webkit-animation-direction: alternate;
 -webkit-animation-play-state: running;
+	
+-moz-animation-name: boxy;
+-moz-animation-duration: 8s;
+-moz-animation-timing-function: linear;
+-moz-animation-delay: 1s;
+-moz-animation-iteration-count: infinite;
+-moz-animation-direction: alternate;
+-moz-animation-play-state: running;
+	
 }
 
 
