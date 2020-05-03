@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 body {
   background-color:#fff2df ;
   font-family: sans-serif;
@@ -43,3 +35,7 @@ h3 {
 }
 
 
+img {
+  max-width: 50%;
+  height: auto;
+}
