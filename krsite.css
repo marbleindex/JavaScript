@@ -1,4 +1,11 @@
 
+
+
+
+
+
+
+
 body {
   background-color:#fff2df ;
   font-family: sans-serif;
@@ -12,7 +19,7 @@ p {
 }
 
 	
-}
+
 
 h1 {
   color: #674d3c;
@@ -30,6 +37,9 @@ h3 {
 	
 
 }
-
+.danger{
+	 background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+}
 
 
