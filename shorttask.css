@@ -1,8 +1,8 @@
 .grid {
  display: grid;
  grid-gap: 10px;
- grid-template-columns: 200px 350px auto;
- grid-template-rows: 25% 75%;
+ grid-template-columns: /*200px 350px*/ auto;
+ grid-template-rows: /*25% 75%*/auto;
  margin: 10px auto;
  min-width: 860px;
  height: 600px;
@@ -22,13 +22,13 @@
  	--body-bg:  #FFFFFF;
  	--body-txt: #800000;
  }
-.grid-area-1 { grid-row-start: 1; grid-row-end: 2; grid-column-start: 1; grid-column-end: 4; text-align: center; background-color: var(--headerfooter-bg); color: var(--headerfooter-txt); }
+.grid-area-1 { grid-row-start: 1; grid-row-end: 1; grid-column-start: 1; grid-column-end: 3; text-align: center; background-color: var(--headerfooter-bg); color: var(--headerfooter-txt); }
 
-.grid-area-2 { width: 200px; grid-row-start: 2; grid-row-end: 2; grid-column-start: 1; grid-column-end:2; background-color: var(--body-bg); color: var(--body-txt)}
+.grid-area-2 { width: 200px; grid-row-start: 2; grid-row-end: 2; grid-column-start: 1; grid-column-end:1; background-color: var(--body-bg); color: var(--body-txt)}
 
-.grid-area-3 { grid-row-start: 2; grid-row-end: 2; grid-column-start: 2; grid-column-end: 4; background-color: var(--body-bg); color: var(--body-txt)}
+.grid-area-3 { grid-row-start: 2; grid-row-end: 2; grid-column-start: 2; grid-column-end: 3; background-color: var(--body-bg); color: var(--body-txt)}
 
-.grid-area-4 { grid-row-start: 3; grid-row-end: 3; grid-column-start: 1; grid-column-end: 4; text-align: center; background-color: var(--headerfooter-bg); color: var(--headerfooter-txt);}
+.grid-area-4 { grid-row-start: 3; grid-row-end: 3; grid-column-start: 1; grid-column-end: 3; text-align: center; background-color: var(--headerfooter-bg); color: var(--headerfooter-txt);}
 
 }
 
