@@ -1,35 +1,41 @@
-.grid {
- display: grid;
- grid-gap: 10px;
- grid-template-columns: /*200px 350px*/ auto;
- grid-template-rows: /*25% 75%*/auto;
- margin: 10px auto;
- /*min-width: 860px;*/
- /*height: 600px;*/
-
-}
-.grid-area {
- font-family: Helvetica, Arial, sans-serif;
- padding: 50px 25px;
-
-}
-
-#nobullets {list-style-type: none;}
-
-:root {
- 	--headerfooter-bg: #009BCD;
- 	--headerfooter-txt: #0000FF;
- 	--body-bg:  #FFFFFF;
- 	--body-txt: #800000;
- }
-.grid-area-1 { grid-row-start: 1; grid-row-end: 1; grid-column-start: 1; grid-column-end: 3; text-align: center; background-color: var(--headerfooter-bg); color: var(--headerfooter-txt); }
-
-.grid-area-2 { grid-row-start: 2; grid-row-end: 2; grid-column-start: 1; grid-column-end:1; background-color: var(--body-bg); color: var(--body-txt)}
-
-.grid-area-3 { grid-row-start: 2; grid-row-end: 2; grid-column-start: 2; grid-column-end: 3; background-color: var(--body-bg); color: var(--body-txt)}
-
-.grid-area-4 { grid-row-start: 3; grid-row-end: 3; grid-column-start: 1; grid-column-end: 3; text-align: center; background-color: var(--headerfooter-bg); color: var(--headerfooter-txt);}
-
-}
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Short Task</title>
+   <meta charset="utf-8">
+   <meta name="description" content="short task assignment for CNIT 132">
+   <link rel="stylesheet" href="shorttask.css">
+   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+<div class="grid">
+ <div  class="grid-area grid-area-1">
+ 	<h1>Marble Index Technical Communications</h1>
+ </div>
+ 
+ <div class="grid-area grid-area-2">
+ 	<ul id="nobullets">                                                                      
+ 		<li>About Us</li>
+ 		<li>Portfolio</li> 	
+ 		<li>Contact</li>
+ 	</ul>
+ </div>
+ <div class="grid-area grid-area-3">
+ 	<h2>Let us handle your documentation needs!</h2>
+ 	<p> Bootstrapping android conversion. Accelerator freemium technology twitter entrepreneur long tail sales. Sales crowdsource business-to-business. Crowdsource product management innovator business-to-business social proof user experience growth hacking responsive web design. </p>
+ 	<p> User experience virality pitch low hanging fruit founders scrum project product management angel investor seed round crowdsource. Vesting period niche market customer. Metrics series A financing user experience. Pitch crowdfunding focus angel investor creative entrepreneur branding.</p>
+ 	</div>
+ <div class="grid-area grid-area-4">
+ 	<p>
+ 	 &#169; 2020 Marble Index TC, Inc. 
+ 	</p>
+    <p><a href="assignments.html">
+			BACK
+				</a>
+ </div>
+</div>
+</body>
+</html>   
