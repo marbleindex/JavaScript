@@ -13,48 +13,6 @@
  padding: 50px 25px;
 
 }
-body {
-  background-color:#fff2df ;
-  font-family: sans-serif;
-
-}
-
-
-p {
-  color: #000000;
-  
-}
-
-	
-
-
-h1 {
-  color: #674d3c;
-  
-}
-
-h2 {
-	color:#a2836e;
-	
-
-}
-
-h3 {
-	color:#d9ad7c ;
-	
-
-}
-.info{
-	 background-color: #ffdddd;
-  border-left: 6px solid #f44336;
-}
-
-
-.meetuppic {
-  width: 266px;
- height: 460px;
-
-}
 
 #nobullets {list-style-type: none;}
 #assignlist {list-style-type: none; justify-content: left;font-size: 200%;}
