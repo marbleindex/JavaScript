@@ -14,12 +14,12 @@
 </head>
 
 <body>
-<div class="grid">
- <div  class="grid-area grid-area-1">
+<main class="grid">
+ <header  class="grid-area grid-area-1">
  		<h1>Contact </h1>
- </div>
+ </header>
 
- <div class="grid-area grid-area-2">
+ <nav class="grid-area grid-area-2">
  	<ul id="nobullets">                                                                      
  		<li>
  			<a href="homework1final.html">
@@ -43,46 +43,49 @@
 				</a>
  		</li>
  	</ul>
- </div>
+ </nav>
 
- <div class="grid-area grid-area-3">
+ <section class="grid-area grid-area-3">
 
- 		<section>
+ 		
 		<h2>
 			Want to connect? Fill out the form below!
 		
 </h2>
 		
 			
-		<form action="#" method="get">
-		<label for="fullname">Full Name:<br> </label><input type="text" placeholder="Full Name" required="" name="fullname" id="fullname" size="50" maxlength="30">
+		<form action="#" method="get" id="contactpage">
+		<label for="fullname">Full Name:<br> </label>
+		<input type="text" placeholder="Full Name" required="" name="fullname" id="fullname" size="50" maxlength="30">
 		<br>
 		<br>
-			<label for="email">Email Address:<br> </label><input type="text" placeholder="Email" required="" name="email" id="email" size="50"  maxlength="30">
+			<label for="email">Email Address:<br> </label>
+			<input type="text" placeholder="Email" required="" name="email" id="email" size="50"  maxlength="30">
 
-			<br>
-		<br>
-		<textarea cols="50" rows="3" placeholder="Type your comments"></textarea>
-		<br>
-		<input type="submit" value="Submit Info">
 		</form>
-		
-</section>
-			
-		
-</div>
+			<br>
+	
 
-<div class="grid-area grid-area-4">
+		<textarea cols="50" rows="3" name="comment" placeholder="Type your comments" form="contactpage">Enter text here...
+	</textarea>
+		<br>
+		<input type="submit" value="Submit Info" form="contactpage">
+		
+		
+
+			
+</section>
+
+<footer class="grid-area grid-area-4">
  	<p>
  	 &#169;  <a href = "mailto:info@kristianreyes.com">2020 Kristian Reyes</a>
 
 
 
  	</p>
-    <p><a href="homework1final.html">
-			BACK
-				</a>
-</div>
-</div>			
+    
+			
+</footer>
+</main>			
 </body>
 </html>
