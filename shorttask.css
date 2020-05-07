@@ -15,7 +15,7 @@
 }
 
 #nobullets {list-style-type: none;}
-
+#assignlist {list-style-type: none; justify-content: left;font-size: 200%;}
 :root {
  	--headerfooter-bg: #009BCD;
  	--headerfooter-txt: #0000FF;
