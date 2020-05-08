@@ -6,7 +6,12 @@
  margin: 10px auto;
  /*min-width: 860px;*/
  /*height: 600px;*/
-
+{
+	a:link {color: var(--headerfooter-bg); }
+	a:active {color:#f57b51;}
+	a:visited {color: #6886c5;}
+	a:hover {color: #b4f2e1;}
+}
 }
 .grid-area {
  font-family: Helvetica, Arial, sans-serif;
@@ -30,12 +35,7 @@
 	 color: red;
   border-left: 6px solid #f44336;
 }
-{
-	a:link {color: var(--headerfooter-bg); }
-	a:active {color:#f57b51;}
-	a:visited {color: #6886c5;}
-	a:hover {color: #b4f2e1;}
-}
+
 
 .meetuppic {
   width: 266px;
