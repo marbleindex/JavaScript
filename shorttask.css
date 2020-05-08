@@ -17,10 +17,10 @@
 #nobullets {list-style-type: none;}
 #assignlist {list-style-type: none; justify-content: left;font-size: 200%;}
 :root {
- 	--headerfooter-bg: #badfdb;
- 	--headerfooter-txt: #ffc5a1;
- 	--body-bg:  #fcf9ea;
- 	--body-txt: #f8a978;
+ 	--headerfooter-bg: #ffe277;
+ 	--headerfooter-txt: #ffb367;
+ 	--body-bg:  #58b4ae;
+ 	--body-txt: #ffe2bc;
  }
 .info{
 	 background-color: #ffdddd;
