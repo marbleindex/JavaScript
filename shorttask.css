@@ -11,11 +11,19 @@
 .grid-area {
  font-family: Helvetica, Arial, sans-serif;
  padding: 50px 25px;
-	a:link {color: var(--headerfooter-bg); 
-	a:active {color:#f57b51;
-	a:visited {color: #6886c5;
-	a:hover {color: #b4f2e1;
+	
 }
+a:link {
+	text-decoration: none; color: var(--headerfooter-bg);
+}
+a:active {
+	text-decoration: none; color:#f57b51;
+}
+a:visited {
+	text-decoration: none; color: #6886c5;
+}
+a:hover {
+	text-decoration: none; color: #b4f2e1;
 }
 
 #nobullets {list-style-type: none; padding-inline-start: 10px;
@@ -31,7 +39,7 @@
  }
 .info{
 	 background-color: var(--info-txt);
-	 color: red;
+	 color: var(--body-txt);
   border-left: 6px solid #f44336;
 }
 
