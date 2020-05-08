@@ -25,7 +25,7 @@
  }
 .info{
 	 background-color: #d63447;
-	 color: red;
+	 color: --navbar-bg;
   border-left: 6px solid #f44336;
 }
 
