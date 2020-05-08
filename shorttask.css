@@ -1,6 +1,6 @@
 .grid {
  display: grid;
-/*   grid-gap: 10px;  */
+  grid-gap: 10px; 
  grid-template-columns: /*200px 350px*/ auto;
  grid-template-rows: /*25% 75%*/auto;
  margin: 10px auto;
@@ -22,13 +22,19 @@
  	--navbar-bg: #ffe2bc;
  	--body-bg:  #58b4ae;
  	--body-txt: #FFFFFF;
+ 	--info-txt: #d63447;
  }
 .info{
-	 background-color: #d63447;
-	 color: --navbar-bg;
+	 background-color: var(--info-txt);
+	 color: red;
   border-left: 6px solid #f44336;
 }
-
+{
+	a:link {color: var(--headerfooter-bg); }
+	a:active {color:#f57b51;}
+	a:visited {color: #6886c5;}
+	a:hover {color: #b4f2e1;}
+}
 
 .meetuppic {
   width: 266px;
