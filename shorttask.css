@@ -10,7 +10,7 @@
 }
 .grid-area {
  font-family: Helvetica, Arial, sans-serif;
- padding: 50px 25px;
+ /*padding: 50px 25px;*/
 
 }
 
@@ -18,12 +18,13 @@
 #assignlist {list-style-type: none; justify-content: left;font-size: 200%;}
 :root {
  	--headerfooter-bg: #ffb367;
- 	--headerfooter-txt: #ffe2bc;
+ 	--headerfooter-txt: #ffe277;
  	--body-bg:  #58b4ae;
  	--body-txt: #FFFFFF;
  }
 .info{
-	 background-color: #ffdddd;
+	 background-color: #d63447;
+	 color: red;
   border-left: 6px solid #f44336;
 }
 
@@ -37,7 +38,7 @@
 
 .grid-area-1 { grid-row-start: 1; grid-row-end: 1; grid-column-start: 1; grid-column-end: 3; text-align: center; background-color: var(--headerfooter-bg); color: var(--headerfooter-txt); }
 
-.grid-area-2 { grid-row-start: 2; grid-row-end: 2; grid-column-start: 1; grid-column-end:1; background-color: var(--body-bg); color: var(--body-txt)}
+.grid-area-2 { grid-row-start: 2; grid-row-end: 2; grid-column-start: 1; grid-column-end:1; text-align: left; background-color: var(--body-bg); color: var(--body-txt)}
 
 .grid-area-3 { grid-row-start: 2; grid-row-end: 2; grid-column-start: 2; grid-column-end: 3; background-color: var(--body-bg); color: var(--body-txt)}
 
