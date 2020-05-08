@@ -22,6 +22,19 @@
  	--body-bg:  #FFFFFF;
  	--body-txt: #800000;
  }
+.info{
+	 background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+}
+
+
+.meetuppic {
+  width: 266px;
+ height: 460px;
+
+}
+
+
 .grid-area-1 { grid-row-start: 1; grid-row-end: 1; grid-column-start: 1; grid-column-end: 3; text-align: center; background-color: var(--headerfooter-bg); color: var(--headerfooter-txt); }
 
 .grid-area-2 { grid-row-start: 2; grid-row-end: 2; grid-column-start: 1; grid-column-end:1; background-color: var(--body-bg); color: var(--body-txt)}
