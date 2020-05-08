@@ -46,8 +46,7 @@
 
 .grid-area-1 { grid-row-start: 1; grid-row-end: 1; grid-column-start: 1; grid-column-end: 3; text-align: center; background-color: var(--headerfooter-bg); color: var(--headerfooter-txt); }
 
-.grid-area-2 { grid-row-start: 2; grid-row-end: 2; grid-column-start: 1; grid-column-end:1;  max-width: 162px;
-; background-color: var(--navbar-bg); color: var(--body-txt)}
+.grid-area-2 { grid-row-start: 2; grid-row-end: 2; grid-column-start: 1; grid-column-end:1;  background-color: var(--navbar-bg); color: var(--body-txt)}
 
 .grid-area-3 { grid-row-start: 2; grid-row-end: 2; grid-column-start: 2; grid-column-end: 3; background-color: var(--body-bg); color: var(--body-txt)}
 
