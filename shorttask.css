@@ -1,6 +1,6 @@
 .grid {
  display: grid;
- grid-gap: 10px;
+/*  grid-gap: 10px; */
  grid-template-columns: /*200px 350px*/ auto;
  grid-template-rows: /*25% 75%*/auto;
  margin: 10px auto;
@@ -17,10 +17,10 @@
 #nobullets {list-style-type: none;}
 #assignlist {list-style-type: none; justify-content: left;font-size: 200%;}
 :root {
- 	--headerfooter-bg: #ffe277;
- 	--headerfooter-txt: #ffb367;
+ 	--headerfooter-bg: #ffb367;
+ 	--headerfooter-txt: #ffe2bc;
  	--body-bg:  #58b4ae;
- 	--body-txt: #ffe2bc;
+ 	--body-txt: #FFFFFF;
  }
 .info{
 	 background-color: #ffdddd;
