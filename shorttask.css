@@ -14,7 +14,8 @@
 
 }
 
-#nobullets {list-style-type: none;}
+#nobullets {list-style-type: none; padding-inline-start: 10px;
+}
 #assignlist {list-style-type: none; justify-content: left;font-size: 200%;}
 :root {
  	--headerfooter-bg: #ffb367;
