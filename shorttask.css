@@ -17,10 +17,10 @@
 #nobullets {list-style-type: none;}
 #assignlist {list-style-type: none; justify-content: left;font-size: 200%;}
 :root {
- 	--headerfooter-bg: #009BCD;
- 	--headerfooter-txt: #0000FF;
- 	--body-bg:  #FFFFFF;
- 	--body-txt: #800000;
+ 	--headerfooter-bg: #badfdb;
+ 	--headerfooter-txt: #ffc5a1;
+ 	--body-bg:  #fcf9ea;
+ 	--body-txt: #f8a978;
  }
 .info{
 	 background-color: #ffdddd;
@@ -45,4 +45,4 @@
 
 }
 
-
+/* https://colorhunt.co/palette/156488 */
