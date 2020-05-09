@@ -30,10 +30,10 @@ a:hover {
 }
 #assignlist {list-style-type: none; justify-content: left;font-size: 200%;}
 :root {
- 	--headerfooter-bg: #ffb367;
- 	--headerfooter-txt: #ffe277;
- 	--navbar-bg: #ffe2bc;
- 	--body-bg:  #58b4ae;
+ 	--headerfooter-bg: #FFB367;
+ 	--headerfooter-txt: #FFFFFF;
+ 	--navbar-bg: #005b57;
+ 	--body-bg:  #FFB367;
  	--body-txt: #FFFFFF;
  	--info-txt: #d63447;
  }
