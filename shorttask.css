@@ -14,7 +14,7 @@
 	
 }
 a:link {
-	text-decoration: none; color: var(--headerfooter-bg);
+	text-decoration: none; color: var(--link-txt);
 }
 a:active {
 	text-decoration: none; color:#f57b51;
@@ -33,8 +33,9 @@ a:hover {
  	--headerfooter-bg: #067873;
  	--headerfooter-txt: #FFFFFF;
  	--navbar-bg: #005b57;
+ 	--link-txt: #FFB367;
  	--body-bg:  #FFB367;
- 	--body-txt: #FFFFFF;
+ 	--body-txt: #000000;
  	--info-txt: #d63447;
  }
 .info{
