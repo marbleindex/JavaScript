@@ -13,6 +13,10 @@
  padding: 50px 25px;
 	
 }
+
+.bodlink {text-decoration: none; color: var(--headerfooter-txt);
+}
+
 a:link {
 	text-decoration: none; color: var(--link-txt);
 }
@@ -25,6 +29,9 @@ a:visited {
 a:hover {
 	text-decoration: none; color: #b4f2e1;
 }
+
+
+
 
 #nobullets {list-style-type: none; padding-inline-start: 10px;
 }
