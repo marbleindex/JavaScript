@@ -14,11 +14,11 @@
 	
 }
 
-.bodlink {text-decoration: none; color: var(--headerfooter-txt);
+.bodlink {text-decoration: none;
 }
 
 a:link {
-	text-decoration: none; color: var(--link-txt);
+	text-decoration: none; color: var(--headerfooter-txt);
 }
 a:active {
 	text-decoration: none; color:var(--headerfooter-txt);
