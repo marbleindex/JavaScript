@@ -12,7 +12,8 @@ height: 100%;
 .grid-area {
  font-family: Helvetica, Arial, sans-serif;
  padding: 50px 25px;
-
+height: 100%;
+  width: 100%
 	
 }
 .krpic { float: left; padding: 10px}
