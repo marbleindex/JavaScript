@@ -5,15 +5,15 @@
  grid-template-rows: /*25% 75%*/auto;
 /*  margin: /*10px auto; */ */
  /*min-width: 860px;*/
-height: 100%;
-  width: 100%;
+ width: 100vw;
+  height: 100vh;
 	
 }
 .grid-area {
  font-family: Helvetica, Arial, sans-serif;
  padding: 50px 25px;
-height: 100%;
-  width: 100%
+ width: 100vw;
+  height: 100vh;
 	
 }
 .krpic { float: left; padding: 10px}
