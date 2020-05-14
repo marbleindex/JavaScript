@@ -5,7 +5,8 @@
  grid-template-rows: /*25% 75%*/auto;
 /*  margin: /*10px auto; */ */
  /*min-width: 860px;*/
- max-height: auto;/
+margin: 0;
+padding: 0;
 
 }
 .grid-area {
