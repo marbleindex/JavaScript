@@ -5,7 +5,7 @@
  grid-template-rows: /*25% 75%*/auto;
 /*  margin: /*10px auto; */ */
  /*min-width: 860px;*/
- /*height: 600px;*/
+ max-height: auto;/
 
 }
 .grid-area {
@@ -37,7 +37,7 @@ a:hover {
 
 #nobullets {list-style-type: none; padding-inline-start: 10px;
 }
-#assignlist {list-style-type: none; justify-content: left;font-size: 200%;}
+#assignlist {list-style-type: none; font-size: 200%;}
 :root {
  	--headerfooter-bg: #067873;
  	--headerfooter-txt: #FFFFFF;
