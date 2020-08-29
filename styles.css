@@ -1,0 +1,63 @@
+.grid {
+ display: grid;
+/*   grid-gap: 10px;  */
+ grid-template-columns: /*200px 350px*/ auto;
+ grid-template-rows: /*25% 75%*/auto;
+/*  margin: /*10px auto; */ */
+ /*min-width: 860px;*/
+ width: 100vw;
+  height: 100vh;
+	
+}
+.grid-area {
+ font-family: Helvetica, Arial, sans-serif;
+ padding: 50px 25px;
+ 
+	
+}
+
+.bodlink {text-decoration: none;
+}
+
+a:link {
+	text-decoration: none; color: var(--headerfooter-txt);
+}
+a:active {
+	text-decoration: none; color:var(--headerfooter-txt);
+}
+a:visited {
+	text-decoration: none; color: #6886c5;
+}
+a:hover {
+	text-decoration: none; color: #b4f2e1;
+}
+
+
+
+#nobullets {list-style-type: none; padding-inline-start: 10px;
+}
+
+:root {
+ 	--headerfooter-bg: #067873;
+ 	--headerfooter-txt: #FFFFFF;
+ 	--navbar-bg: #005b57;
+ 	--link-txt: #FFB367;
+ 	--body-bg:  #FFB367;
+ 	--body-txt: #000000;
+ 	--info-txt: #d63447;
+ }
+
+
+
+
+.grid-area-1 { grid-row-start: 1; grid-row-end: 1; grid-column-start: 1; grid-column-end: 3; text-align: center; background-color: var(--headerfooter-bg); color: var(--headerfooter-txt); }
+
+.grid-area-2 { grid-row-start: 2; grid-row-end: 2; grid-column-start: 1; grid-column-end:1;  background-color: var(--navbar-bg); color: var(--body-txt);}
+
+.grid-area-3 { grid-row-start: 2; grid-row-end: 2; grid-column-start: 2; grid-column-end: 3; background-color: var(--body-bg); color: var(--body-txt);}
+
+.grid-area-4 { grid-row-start: 3; grid-row-end: 3; grid-column-start: 1; grid-column-end: 3; text-align: center; background-color: var(--headerfooter-bg); color: var(--headerfooter-txt);}
+
+}
+
+/* https://colorhunt.co/palette/156488 */
