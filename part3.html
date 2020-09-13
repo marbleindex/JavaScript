@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!--Kristian Reyes 9/12/2020 -->
+      <title>CNIT 133 Homework 2</title>
+      <meta charset="utf-8">
+      <meta name="description" content="homework 2 for CCSF CNIT 133">
+      <meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
+      <meta name="author" content="Kristian Reyes">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--bootstrap 	 -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--bootstrap 	 -->
+      <script>
+         function process() {
+         var number1, number2, number3, number4, number5, n1, n2, n3, n4, n5, countneg, countposi, countzeroes;
+         
+         number1 = document.forms["myform"].elements["num1"].value;
+         number2 = document.forms["myform"].elements["num2"].value;
+         number3 = document.forms["myform"].elements["num3"].value;
+         number4 = document.forms["myform"].elements["num4"].value;
+         number5 = document.forms["myform"].elements["num5"].value;
+         
+         
+         n1 = parseInt(number1);
+         n2 = parseInt(number2);
+         n3 = parseInt(number3);
+         n4 = parseInt(number4);
+         n5 = parseInt(number5);
+         
+         
+         if (isNaN(n1) == true || isNaN(n2) == true || isNaN(n3) == true || isNaN(n4) == true || isNaN(n5) == true)
+           { 
+           	alert ("All entries must be NUMBERS! Click RESET and try again.")
+           
+           }
+         else
+         {
+         
+         countneg = 0;
+         countposi = 0; 
+         countzeroes = 0;
+         
+         if (Math.sign(n1) == 1)
+           { 
+           	countposi+=1
+        	}else{
+        	countneg+=1
+        }
+          if (Math.sign(n2) == 1)
+           { 
+           	countposi+=1
+        	}else{
+        	countneg+=1
+        }
+         if (Math.sign(n3) == 1)
+           { 
+           	countposi+=1
+        	}else{
+        	countneg+=1
+        }
+
+         if (Math.sign(n4) == 1)
+           { 
+           	countposi+=1
+        	}else{
+        	countneg+=1
+        }
+   
+         if (Math.sign(n5) == 1)
+           { 
+           	countposi+=1
+        	}else{
+        	countneg+=1
+        }
+         
+         // if numbers_test.includes("0"){
+         //        countzeroes++;
+         // }
+         
+         document.forms["myform"].elements["results"].value = ("The count of positive numbers is " + countposi + "." + "\nThe count negative numbers is " + countneg + "."+ "\nThe number of zeroes is " + countzeroes + "." );
+        }};
+         
+      </script>
+   </head>
+   <body>
+      <main class="grid">
+         <header  class="grid-area grid-area-1">
+            <h1>CNIT 133 Homework 2 - Basic Operations </h1>
+         </header>
+         <nav class="grid-area grid-area-2">
+            <ul>
+               <li>
+                  <a href="homework1.html" title="CNIT 133 - homepage">
+                  Return to homepage
+                  </a>
+               </li>
+            </ul>
+         </nav>
+         <section class="grid-area grid-area-3">
+            <h2>Part 3 </h2>
+            <p> Please enter five numbers below!</p>
+            <form name="myform">
+               <table>
+                  <tr>
+                     <td>First Number:</td>
+                     <td><input type="text" name="num1" size="10"></td>
+                  </tr>
+                  <tr>
+                     <td>Second Number:</td>
+                     <td><input type="text" name="num2" size="10"></td>
+                  </tr>
+                  <tr>
+                     <td>Third Number:</td>
+                     <td><input type="text" name="num3" size="10"></td>
+                  </tr>
+                  <tr>
+                     <td>Fourth Number:</td>
+                     <td><input type="text" name="num4" size="10"></td>
+                  </tr>
+                  <tr>
+                     <td>Fifth Number:</td>
+                     <td><input type="text" name="num5" size="10"></td>
+                  </tr>
+               </table>
+               <br>
+               Results:
+               <br>
+               <br>
+               <textarea rows="8" cols="40" name="results">
+</textarea>
+               <br>
+               <br>
+               <input type="button" onclick="process()" value="SUBMIT">
+               <input type="reset" value="RESET">
+            </form>
+         </section>
+         <footer class="grid-area grid-area-4">
+            <p>
+               &#169; 2020 Kristian Reyes 
+            </p>
+         </footer>
+      </main>
+   </body>
+</html>

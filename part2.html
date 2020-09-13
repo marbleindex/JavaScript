@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>	
+	<!--Kristian Reyes 9/12/2020 -->
+
+	<title>CNIT 133 Homework 2</title>
+	<meta charset="utf-8">
+	<meta name="description" content="homework 2 for CCSF CNIT 133">
+	<meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
+	<meta name="author" content="Kristian Reyes">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--bootstrap 	 -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	
+	<!--bootstrap 	 -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("input").click(function(){
+    $("textarea").fadeTo("slow", 0.15);
+   
+  });
+});
+</script>
+
+<script>
+    function process() {
+    var number1, number2, number3, n1, n2, n3, sum, average, product, smallest, largest;
+
+    number1 = document.forms["myform"].elements["num1"].value;
+    number2 = document.forms["myform"].elements["num2"].value;
+    number3 = document.forms["myform"].elements["num3"].value;
+
+    n1 = parseInt(number1);
+    n2 = parseInt(number2);
+    n3 = parseInt(number3);
+
+
+if (isNaN(n1) == true || isNaN(n2) == true || isNaN(n3) == true) // returns true if the variable does NOT contain a valid number
+	    { 
+	    	alert ("All entries must be NUMBERS! Click RESET and try again.")
+	    }
+else
+{
+	sum = n1 + n2 + n3;
+    average = sum / 3; 
+    product = n1 * n2 * n3;
+    smallest = Math.min(n1, n2, n3);
+    largest = Math.max(n1, n2, n3); 
+	
+	document.forms["myform"].elements["results"].value = ("The sum of the numbers is " + sum + "." + "\nThe average of the numbers is " + average + "."+ "\nThe product of the numbers is " + product + "." + "\nThe smallest number is " + smallest + "." + "\nThe largest number is " + largest + ".");
+	    }
+
+
+		
+   
+
+    }
+
+
+
+         
+
+</script>
+
+
+</head>
+
+
+<body>
+	<main class="grid">
+		<header  class="grid-area grid-area-1">
+			<h1>CNIT 133 Homework 2 - Basic Operations </h1>
+		</header>
+
+		<nav class="grid-area grid-area-2">
+			<ul>                                                                    
+				<li>
+					<a href="homework1.html" title="CNIT 133 - homepage">
+						Return to homepage
+					</a>
+				</li>
+			</ul>
+			                                                                     
+			
+		</nav>
+
+
+		<section class="grid-area grid-area-3">
+
+			<h2>Part 2 </h2>
+			<p> Please enter three numbers below!</p>
+<form name="myform">
+  <table>
+    <tr>
+      <td>First Number:</td>
+      <td><input type="text" name="num1" size="10"></td>
+    </tr>
+    <tr>
+      <td>Second Number:</td>
+      <td><input type="text" name="num2" size="10"></td>
+    </tr>
+    <tr>
+      <td>Third Number:</td>
+      <td><input type="text" name="num3" size="10"></td>
+    </tr>
+  </table>
+ <br>
+ Results:
+ <br>
+ <br>
+<textarea rows="8" cols="40" name="results">
+</textarea>
+<br>
+<br>
+  <input type="button" onclick="process()" value="SUBMIT">
+  <input type="reset" value="RESET">
+</form>
+
+</section>
+		<footer class="grid-area grid-area-4">
+				<p>
+					&#169; 2020 Kristian Reyes 
+				</p>
+
+			</footer>
+
+		</main>			
+	</body>
+	</html>
