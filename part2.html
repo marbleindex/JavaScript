@@ -25,8 +25,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("input").click(function(){
-    $("textarea").fadeTo("slow", 0.15);
+  $("button").click(function(){
+    $("#fadearea").fadeTo("slow", 0.30);
    
   });
 });
@@ -115,15 +115,17 @@ else
     </tr>
   </table>
  <br>
+ <input type="button" onclick="process()" value="SUBMIT">
+  <input type="reset" value="RESET">
+  <br>
  Results:
  <br>
  <br>
-<textarea rows="8" cols="40" name="results">
+<textarea rows="8" cols="40" id="fadearea" name="results">
 </textarea>
 <br>
 <br>
-  <input type="button" onclick="process()" value="SUBMIT">
-  <input type="reset" value="RESET">
+  <button type="button">Click to fade results :) </button>
 </form>
 
 </section>
