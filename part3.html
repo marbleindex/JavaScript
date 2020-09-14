@@ -30,6 +30,9 @@
          n3 = parseInt(number3);
          n4 = parseInt(number4);
          n5 = parseInt(number5);
+         countneg = 0;
+         countposi = 0; 
+         countzeroes = 0;
          
          
          if (isNaN(n1) == true || isNaN(n2) == true || isNaN(n3) == true || isNaN(n4) == true || isNaN(n5) == true)
@@ -40,47 +43,77 @@
          else
          {
          
-         countneg = 0;
-         countposi = 0; 
-         countzeroes = 0;
-         
-         if (Math.sign(n1) == 1)
-           { 
-           	countposi+=1
-        	}else{
-        	countneg+=1
+        // first number validation
+        if (n1 > 0)
+        {
+            countposi++;
         }
-          if (Math.sign(n2) == 1)
-           { 
-           	countposi+=1
-        	}else{
-        	countneg+=1
+        if (n1 < 0)
+        {
+            countneg++;
         }
-         if (Math.sign(n3) == 1)
-           { 
-           	countposi+=1
-        	}else{
-        	countneg+=1
+        if (n1 == 0)
+        {
+            countzeroes++;
+        }
+        
+        // second number validation
+        if (n2 > 0)
+        {
+            countposi++;
+        }
+        if (n2 < 0)
+        {
+            countneg++;
+        }
+        if (n2 == 0)
+        {
+            countzeroes++;
+        }
+        
+        // third number validation
+        if (n3 > 0)
+        {
+            countposi++;
+        }
+        if (n3 < 0)
+        {
+            countneg++;
+        }
+        if (n3 == 0)
+        {
+            countzeroes++;
         }
 
-         if (Math.sign(n4) == 1)
-           { 
-           	countposi+=1
-        	}else{
-        	countneg+=1
+        // fourth number validation
+        if (n4 > 0)
+        {
+            countposi++;
         }
-   
-         if (Math.sign(n5) == 1)
-           { 
-           	countposi+=1
-        	}else{
-        	countneg+=1
+        if (n4 < 0)
+        {
+            countneg++;
+        }
+        if (n4 == 0)
+        {
+            countzeroes++;
+        }
+
+        // first number validation
+        if (n5 > 0)
+        {
+            countposi++;
+        }
+        if (n5 < 0)
+        {
+            countneg++;
+        }
+        if (n5 == 0)
+        {
+            countzeroes++;
         }
          
-         // if numbers_test.includes("0"){
-         //        countzeroes++;
-         // }
-         
+
          document.forms["myform"].elements["results"].value = ("The count of positive numbers is " + countposi + "." + "\nThe count negative numbers is " + countneg + "."+ "\nThe number of zeroes is " + countzeroes + "." );
         }};
          
