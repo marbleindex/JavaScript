@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!--Kristian Reyes 9/26/2020 -->
+      <title>CNIT 133 Homework 2</title>
+      <meta charset="utf-8">
+      <meta name="description" content="homework 3 for CCSF CNIT 133">
+      <meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
+      <meta name="author" content="Kristian Reyes">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--bootstrap    -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--bootstrap    -->
+      
+      <!-- jquery validation -->
+      <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+      
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   
+      <!-- jquery validation -->
+       <script>
+        $(document).ready(function(){
+    $("#myForm").validate({
+        // Rules for each input item
+        rules: 
+        {
+      item1: { required: true, number: true, text-align: right},
+      item2: { required: true, number: true, text-align: right},
+      item3: { required: true, number: true, text-align: right},
+      item4: { required: true, number: true, text-align: right},
+        }
+      });          
+
+      function getBMI() {
+        if ($("#myForm").valid()) {
+
+      var item1 = document.getElementById("item1").value;
+      var item2 = document.getElementById("item2").value;
+      var item3 = document.getElementById("item3").value;
+      var item4 = document.getElementById("item4").value;
+
+      var item1tot = (item1 * 239.99).toFixed(2);
+      var item2tot = (item2 * 129.75).toFixed(2);
+      var item3tot = (item3 * 239.99).toFixed(2);
+      var item4tot = (item4 * 350.89).toFixed(2);
+
+      var totamount = item1 + item2 + item3 + item4
+      var totearn = item1tot + item2tot + item3tot + item4tot
+ 
+      var bodymi = (w/(h*h))*703;
+      var bodymiFixed = bodymi.toFixed(2) 
+      document.getElementById("bmi").value = bodymiFixed; 
+  
+   }
+}
+
+      </script>
+
+
+
+ <body>
+      <main class="grid">
+         <header  class="grid-area grid-area-1">
+            <h1>CNIT 133 Homework 3 - Functions </h1>
+         </header>
+         <nav class="grid-area grid-area-2">
+            <ul>
+               <li>
+                  <a href="homework1.html" title="CNIT 133 - HW 2">
+                  Return to CNIT 133 Homework 2 - Basic Operations
+                  </a>
+               </li>
+            </ul>
+         </nav>
+         
+
+         <section class="grid-area grid-area-3">
+            <h1> HW 3 - Part 2 </h1>
+            <h2> Sales Commissions </h2>
+
+           <label for="salesname">Salesperson's Name:</label>
+      <input id="salesname" name="salesname" title="Please make sure that the salesperson's name is spelled correctly.">
+
+      <br>
+      <br>
+      <br>
+
+            <form name="itemtally">
+               <table>
+                  <tr>
+                     <td>Item 1:</td>
+                     <td><input id="item1" type="number" size="10"></td>
+                  </tr>
+                  <tr>
+                     <td>Item 2:</td>
+                     <td><input id="item2" type="number" size="10"></td>
+                  </tr>
+                  <tr>
+                     <td>Item 3:</td>
+                     <td><input id="item3" type="number" size="10"></td>
+                  </tr>
+                  <tr>
+                     <td>Item 4:</td>
+                     <td><input id="item4" type="number" size="10"></td>
+                  </tr>
+
+               </table>
+               <br>
+                  <button onclick="itemCalc()">Submit</button>
+                  <input type="reset"  value="reset" onclick="location.reload()">
+               <br>
+               <br>
+         </form>
+
+         
+           <table id ="totaltally">
+               <tr>
+                  <th> Item # </th>
+                  <th> Price </th>
+                  <th> Number Sold </th>
+                  <th>Total</th>
+               </tr>
+               <tr>
+                  <td> 1 </td>
+                  <td> $239.99 </td>
+                  <td> NUMBER SOLD </td>
+                  <td> TOTAL </td>
+            </tr>
+                  <td>2</td>
+                  <td> $129.75 </td>
+                  <td> NUMBER SOLD </td>
+                  <td> TOTAL </td>
+            <tr>
+                  <td> 3 </td>
+                  <td> $99.95 </td>
+                  <td> NUMBER SOLD </td>
+                  <td> TOTAL </td>
+            </tr>
+            </tr>
+                  <td> 4 </td>
+                  <td> $350.89 </td>
+                  <td> NUMBER SOLD </td>
+                  <td> TOTAL </td>
+            <tr>
+            <tr>
+                  <td>Total Amount Sold</td> 
+            </tr>
+            <tr>
+                  <td>Total Weekly Earnings</td> 
+            </tr>
+      </table>
+
+
+
+
+           
+         </section>
+         
+
+         <footer class="grid-area grid-area-4">
+            <p>
+               &#169; 2020 Kristian Reyes 
+            </p>
+         </footer>
+      </main>
+   </body>
+</html>
