@@ -31,7 +31,7 @@
       finalExam = document.getElementById("finalExam").value;
       participation = document.getElementById("participation").value;
       
-      var errMsg = "<span> Input is invalid. Only enter positive integers between 0 and 100. </span>";
+      var errMsg = "<span style='font-weight: bold; color: red; font-size: 20px;'> Input is invalid. Only enter positive integers between 0 and 100. </span>";
 
         if (isNaN(hwAvg) || isNaN(midExam) || isNaN(finalExam) || isNaN(participation) || hwAvg < 0 || midExam < 0 || finalExam < 0 || participation < 0 || hwAvg > 100|| midExam > 100 || finalExam > 100 || participation > 100) 
       
