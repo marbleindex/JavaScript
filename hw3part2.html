@@ -39,10 +39,17 @@
         // if ($("#myform").valid()) {
        event.preventDefault();      
 
-      var item1 = document.getElementById("item1").value;
-      var item2 = document.getElementById("item2").value;
-      var item3 = document.getElementById("item3").value;
-      var item4 = document.getElementById("item4").value;
+      var item1 = parseInt(document.getElementById("item1").value);
+      var item2 = parseInt(document.getElementById("item2").value);
+      var item3 = parseInt(document.getElementById("item3").value);
+      var item4 = parseInt(document.getElementById("item4").value);
+
+      var errMsg = "<span style='font-weight: bold; color: red; font-size: 20px;'> Input is invalid. Only enter positive integers.</span>";
+
+        if (isNaN(item1) || isNaN(item2) || isNaN(item3) || isNaN(item4) || item1 < 0 || item2 < 0 || item3 < 0 || item4 < 0 ) 
+      
+      document.getElementById("inputErr").innerHTML = errMsg;
+   else{
 
       var item1tot = (item1 * 239.99).toFixed(2);
       var item2tot = (item2 * 129.75).toFixed(2);
@@ -51,29 +58,34 @@
 
 
       var totamount = item1 + item2 + item3 + item4;
-      var totearn = item1tot + item2tot + item3tot + item4tot;
+      var totearn = parseInt(item1tot) + parseInt(item2tot) + parseInt(item3tot) + parseInt(item4tot);
+
+      totearn = totearn.toFixed(2)
  
       document.getElementById("tally1").innerHTML = item1;
-      document.getElementById("total1").innerHTML = item1tot;
+      document.getElementById("total1").innerHTML = "$" + item1tot;
 
       document.getElementById("tally2").innerHTML = item2;
-      document.getElementById("total2").innerHTML = item2tot;
+      document.getElementById("total2").innerHTML = "$" + item2tot;
 
       document.getElementById("tally3").innerHTML = item3;
-      document.getElementById("total3").innerHTML = item3tot;
+      document.getElementById("total3").innerHTML = "$" + item3tot;
        
       document.getElementById("tally4").innerHTML = item4;
-      document.getElementById("total4").innerHTML = item4tot;
+      document.getElementById("total4").innerHTML = "$" +  item4tot;
 
 
-      document.getElementById("grandtotal").innerHTML = totamount; 
-      document.getElementById("grandearnings").innerHTML = totearn; 
+      document.getElementById("grandtotal").innerHTML = totamount;
+      document.getElementById("grandearnings").innerHTML = "$" + totearn; 
   
-  
+  }
    }
 </script>
 
+<style type="text/css">
+   .r {text-align: right;}
 
+</style>
 
  <body>
       <main class="grid">
@@ -98,7 +110,9 @@
            <label for="salesname">Salesperson's Name:</label>
       <input id="salesname" name="salesname" title="Please make sure that the salesperson's name is spelled correctly.">
 
-      <br>
+            <br>
+                  <div id ="inputErr"></div> 
+
       <br>
       <br>
 
@@ -106,19 +120,19 @@
                <table>
                   <tr>
                      <td>Item 1:</td>
-                     <td><input id="item1" type="number" size="10"></td>
+                     <td><input class="r" id="item1" type="number" size="10"></td>
                   </tr>
                   <tr>
                      <td>Item 2:</td>
-                     <td><input id="item2" type="number" size="10"></td>
+                     <td><input class="r" id="item2" type="number" size="10"></td>
                   </tr>
                   <tr>
                      <td>Item 3:</td>
-                     <td><input id="item3" type="number" size="10"></td>
+                     <td><input class="r" id="item3" type="number" size="10"></td>
                   </tr>
                   <tr>
                      <td>Item 4:</td>
-                     <td><input id="item4" type="number" size="10"></td>
+                     <td><input class="r" id="item4" type="number" size="10"></td>
                   </tr>
 
                </table>
@@ -135,37 +149,42 @@
                   <th> Item # </th>
                   <th> Price </th>
                   <th> Number Sold </th>
+                  <th>  </th>
                   <th>Total</th>
                </tr>
                <tr>
                   <td> 1 </td>
                   <td> $239.99 </td>
-                  <td id = "tally1" >  </td>
-                  <td id = "total1" > </td>
+                  <td class="r" id = "tally1" >  </td>
+                  <td></td>
+                  <td class="r" id = "total1" > </td>
             </tr>
                   <td>2</td>
                   <td> $129.75 </td>
-                  <td id = "tally2" >  </td>
-                  <td id = "total2" > </td>
+                  <td class="r" id = "tally2" >  </td>
+                  <td></td>
+                  <td class="r" id = "total2" > </td>
             <tr>
                   <td> 3 </td>
                   <td> $99.95 </td>
-                  <td id = "tally3" >  </td>
-                  <td id = "total3" > </td>
+                  <td class="r" id = "tally3" >  </td>
+                  <td></td>
+                  <td class="r" id = "total3" > </td>
             </tr>
             </tr>
                   <td> 4 </td>
                   <td> $350.89 </td>
-                  <td id = "tally4" >  </td>
-                  <td id = "total4" > </td>
+                  <td class="r" id = "tally4" >  </td>
+                  <td></td>
+                  <td class="r" id = "total4" > </td>
             <tr>
             <tr>
                   <td>Total Amount Sold</td>
-                  <td id="grandtotal"></td>
+                  <td class="r" id="grandtotal"></td>
             </tr>
             <tr>
                   <td>Total Weekly Earnings</td>
-                  <td id="grandearnings"></td> 
+                  <td class="r" id="grandearnings"></td> 
             </tr>
       </table>
            
