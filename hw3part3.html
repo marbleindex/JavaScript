@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!--Kristian Reyes 9/26/2020 -->
+      <title>CNIT 133 Homework 3</title>
+      <meta charset="utf-8">
+      <meta name="description" content="homework 3 for CCSF CNIT 133">
+      <meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
+      <meta name="author" content="Kristian Reyes">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--bootstrap    -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--bootstrap    -->
+      
+      <!-- jquery validation -->
+      <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+      
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+
+        function convCelsius() {
+            var temp = parseInt(document.getElementById("temp").value);
+            temp = 5/9 * (temp - 32);
+            return showConversion(temp)
+
+        }
+        function convFahrenheit() {
+            var temp = parseInt(document.getElementById("temp").value);
+            temp = (9/5 * temp) + 32;
+            return showConversion(temp)
+        }
+        function showConversion() {
+            document.getElementById("results").innerHTML = Math.round(temp);
+            
+            }
+    </script> 
+
+
+
+     <body>
+      <main class="grid">
+         <header  class="grid-area grid-area-1">
+            <h1>CNIT 133 Homework 3 - Functions </h1>
+         </header>
+         <nav class="grid-area grid-area-2">
+            <ul>
+               <li>
+                  <a href="homework1.html" title="CNIT 133 - HW 2">
+                  Return to CNIT 133 Homework s
+                  </a>
+               </li>
+            </ul>
+         </nav>
+         <section class="grid-area grid-area-3">
+            <h1> HW 3 - Part 3 </h1>
+          
+<h1>Temperature Converter</h2>
+
+      <form name="myform" id="myform">
+
+         <table>
+            <tr>
+                <td> Temperature to Convert:</td>
+                <td><input id="temp" type="number"></td>
+    
+            </tr>
+            <tr>
+                <td><button type="button" onclick="convCelsius()">Convert Temperature to Celsius</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="convFahrenheit()">Convert Temperature to Fahrenheit</button></td>
+            </tr>
+            <tr>
+               <td> Conversion Result:</td>
+                <td><input id="results" type="number" readonly></td>
+            </tr>
+        </table>
+</form>
+
+      
+
+</section>
+         
+
+         <footer class="grid-area grid-area-4">
+            <p>
+               &#169; 2020 Kristian Reyes 
+            </p>
+         </footer>
+      </main>
+   </body>
+</html>
