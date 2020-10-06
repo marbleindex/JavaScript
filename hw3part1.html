@@ -16,6 +16,7 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <!--bootstrap    -->
       <script>
+         
          function finalGrade() 
          { 
          event.preventDefault();
@@ -47,23 +48,24 @@
                // Display the final grade based on final average 
          
                case (finalAverage >= 90):
-               document.forms["myform"].elements["finalAverage"].value=(finalAverage + ". " + "The student has a grade of A.");
+               document.getElementById("final").innerHTML = (finalAverage + ". " + "The student has a grade of A.");
+                
                break;
               
                case (finalAverage >= 80):
-               document.forms["myform"].elements["finalAverage"].value=(finalAverage + ". " + "The student has a grade of B.");
+               document.getElementById("final").innerHTML = (finalAverage + ". " + "The student has a grade of B.");
                break;
                
                case (finalAverage >= 70):
-               document.forms["myform"].elements["finalAverage"].value=(finalAverage + ". " + "The student has a grade of C.");
+               document.getElementById("final").innerHTML = (finalAverage + ". " + "The student has a grade of C.");
                break;
             
-            case (finalAverage >= 60):
-               document.forms["myform"].elements["finalAverage"].value=(finalAverage + ". " + "The student has a grade of D.");
+               case (finalAverage >= 60):
+               document.getElementById("final").innerHTML = (finalAverage + ". " + "The student has a grade of D.");
                break;
               
                case (finalAverage <= 59):
-               document.forms["myform"].elements["finalAverage"].value=(finalAverage + ". " + "The student has a grade of F. Student must retake the course.");
+               document.getElementById("final").innerHTML = (finalAverage + ". " + "The student has a grade of F. Student must retake the course.");
                break;     
          }
          }}
@@ -77,8 +79,8 @@
          <nav class="grid-area grid-area-2">
             <ul>
                <li>
-                  <a href="homework1.html" title="CNIT 133 - HW 2">
-                  Return to CNIT 133 Homework 2 - Basic Operations
+                  <a href="homework3.html" title="CNIT 133 - HW 3">
+                  Return to CNIT 133 Homework 3 - Functions
                   </a>
                </li>
             </ul>
@@ -111,12 +113,12 @@
             <div id ="inputErr"></div>
             <br>
             <br>
-            <p> Submit results to calculate student's final average .</p>
+            <p> Submit results to calculate student's final average.</p>
             <button onclick="finalGrade()">Submit</button>
             <br> 
             <p> The student's final average is: </p>
             <p>
-               <input type="text" id="finalAverage" readonly="readonly" size="60">
+               <input type="text" id="final"  size="60">
             </p>
          </section>
          <footer class="grid-area grid-area-4">
