@@ -16,48 +16,49 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <!--bootstrap    -->
       <script>
+         var num1 = 0;
+         var num2 = 0;
+         
+
          function startGame() {
-            var num1 = Math.floor(Math.random() * 10);
-            var num2 = Math.floor(Math.random() * 10);
+            num1 = Math.floor(Math.random() * 10);
+            num2 = Math.floor(Math.random() * 10);
             var query = "How much is " + num1 + " times " + num2 + "?";
             document.getElementById("query").innerHTML = query;
-            checkAnswer(num1, num2);
             
-
-                        
+                      
          }
          
-         function checkAnswer(num1,num2) {
-         
+         function checkAnswer() {
+         document.getElementById("queryans").innerHTML = query;
          var numguess = document.getElementById("numguess").value;
          var answer = num1 * num2;
          
          if (numguess == answer) {
-                   document.getElementById("results").innerHTML =  "Very good!";
-               function myFunction() {
-                 var txt;
-                 var r = confirm("Continue?");
-                 if (r == true) {
-                 txt = "Next question coming up!";
-                 startGame();
-                 } else {
-                  txt = "Thanks for playing!";
-                   document.getElementById("demo").innerHTML = txt;
+                   document.getElementById("result").innerHTML =  "Very good!";
+                   confirmStatement(); 
+        }else{
+           
+                 
+         document.getElementById("result").innerHTML =  "No. Please try again.";
          }}
                   
-        
          
-         if (numguess != answer) {
-                 
-         document.getElementById("results").innerHTML =  "No. Please try again.";
-         }
-         
-         
-         
+   function confirmStatement() {
+     var txt;
+     var r = confirm("Continue?");
+     if (r == true) {
+     txt = "Next question coming up!";
+     startGame();
+     } else {
+      txt = "Thanks for playing!";
+       document.getElementById("demo").innerHTML = txt;
+       document.getElementById("queryans").innerHTML = "";
          }}
-         
+
       </script>
-   <body>
+
+   <body onload="startGame()">
       <main class="grid">
          <header  class="grid-area grid-area-1">
             <h1>Homework 3 - Part 4 </h1>
@@ -73,8 +74,12 @@
          </nav>
          <section class="grid-area grid-area-3">
             <h3>Practice Your Multiplication Skills!</h3>
+            <div id="result"></div>
+            <p id="demo"></p>
+            <br><br>
             <form name="myform" id="myform">
                <b id="query"></b> 
+               <b id="queryans"></b>
                <input id="numguess" name="numguess" type="number" size="3">
                <br>
                <br>
@@ -82,9 +87,10 @@
                <input  type="button" value="Let's Play!" onclick="startGame()">
                <input  type="button" value="Submit Answer" onclick="checkAnswer();">
             </form>
-            <div id="result"></div>
-            <p id="demo"></p>
+            
          </section>
+         
+
    </body>
    </section>
    <footer class="grid-area grid-area-4">
