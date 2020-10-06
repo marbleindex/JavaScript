@@ -19,7 +19,7 @@
          var num1 = 0;
          var num2 = 0;
          
-
+         
          function startGame() {
             num1 = Math.floor(Math.random() * 10);
             num2 = Math.floor(Math.random() * 10);
@@ -37,27 +37,26 @@
          if (numguess == answer) {
                    document.getElementById("result").innerHTML =  "Very good!";
                    confirmStatement(); 
-        }else{
+         }else{
            
                  
          document.getElementById("result").innerHTML =  "No. Please try again.";
          }}
                   
          
-   function confirmStatement() {
-     var txt;
-     var r = confirm("Continue?");
-     if (r == true) {
-     txt = "Next question coming up!";
-     startGame();
-     } else {
-      txt = "Thanks for playing!";
-       document.getElementById("demo").innerHTML = txt;
-       document.getElementById("queryans").innerHTML = "";
+         function confirmStatement() {
+         var txt;
+         var r = confirm("Continue?");
+         if (r == true) {
+         txt = "Next question coming up!";
+         startGame();
+         } else {
+         txt = "Thanks for playing!";
+         document.getElementById("demo").innerHTML = txt;
+         document.getElementById("queryans").innerHTML = "";
          }}
-
+         
       </script>
-
    <body onload="startGame()">
       <main class="grid">
          <header  class="grid-area grid-area-1">
@@ -87,10 +86,7 @@
                <input  type="button" value="Let's Play!" onclick="startGame()">
                <input  type="button" value="Submit Answer" onclick="checkAnswer();">
             </form>
-            
          </section>
-         
-
    </body>
    </section>
    <footer class="grid-area grid-area-4">
