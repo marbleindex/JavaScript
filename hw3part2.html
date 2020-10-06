@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <!--Kristian Reyes 9/12/2020 -->
+      <!--Kristian Reyes 9/26/2020 -->
       <title>CNIT 133 Homework 3</title>
       <meta charset="utf-8">
       <meta name="description" content="homework 3 for CCSF CNIT 133">
@@ -10,114 +10,171 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!--bootstrap    -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-         ></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <!--bootstrap    -->
+      <!-- jquery validation -->
+      <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <!-- jquery validation -->
       <script>
-         function finalGrade() 
-         { 
-         event.preventDefault();
+         <!-- // $(document).ready(function(){ -->
+         // $("#myform").validate({
+         //     // Rules for each input item
+         //     // rules: 
+         //     {
+         //   item1: { required: true, number: true },
+         //   item2: { required: true, number: true },
+         //   item3: { required: true, number: true },
+         //   item4: { required: true, number: true },
+         //     }
+         //   });          
          
-         document.getElementById("inputErr").innerHTML = "";
+         function itemCalc() {
+         // if ($("#myform").valid()) {
+         event.preventDefault();      
          
+         var item1 = parseInt(document.getElementById("item1").value);
+         var item2 = parseInt(document.getElementById("item2").value);
+         var item3 = parseInt(document.getElementById("item3").value);
+         var item4 = parseInt(document.getElementById("item4").value);
          
-         var hwAvg, midExam, finalExam, participation, finalAverage;
+         var errMsg = "<span style='font-weight: bold; color: red; font-size: 20px;'> Input is invalid. Only enter positive integers.</span>";
          
-         hwAvg = document.getElementById("hwAvg").value;
-         midExam = document.getElementById("midExam").value;
-         finalExam = document.getElementById("finalExam").value;
-         participation = document.getElementById("participation").value;
-         
-         var errMsg = "<span style='font-weight: bold; color: red; font-size: 20px;'> Input is invalid. Only enter positive integers between 0 and 100. </span>";
-         
-           if (isNaN(hwAvg) || isNaN(midExam) || isNaN(finalExam) || isNaN(participation) || hwAvg < 0 || midExam < 0 || finalExam < 0 || participation < 0 || hwAvg > 100|| midExam > 100 || finalExam > 100 || participation > 100) 
+         if (isNaN(item1) || isNaN(item2) || isNaN(item3) || isNaN(item4) || item1 < 0 || item2 < 0 || item3 < 0 || item4 < 0 ) 
          
          document.getElementById("inputErr").innerHTML = errMsg;
+         else{
          
-           else
-         {
-         finalAverage = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * participation);
+         var item1tot = (item1 * 239.99).toFixed(2);
+         var item2tot = (item2 * 129.75).toFixed(2);
+         var item3tot = (item3 * 239.99).toFixed(2);
+         var item4tot = (item4 * 350.89).toFixed(2);
          
          
-         switch (true)
-               
-         {
-               // Display the final grade based on final average 
+         var totamount = item1 + item2 + item3 + item4;
+         var totearn = parseInt(item1tot) + parseInt(item2tot) + parseInt(item3tot) + parseInt(item4tot);
          
-               case (finalAverage >= 90):
-               document.forms["myform"].elements["finalAverage"].value=(finalAverage + ". " + "The student has a grade of A.");
-               break;
-              
-               case (finalAverage >= 80):
-               document.forms["myform"].elements["finalAverage"].value=(finalAverage + ". " + "The student has a grade of B.");
-               break;
-               
-               case (finalAverage >= 70):
-               document.forms["myform"].elements["finalAverage"].value=(finalAverage + ". " + "The student has a grade of C.");
-               break;
-            
-            case (finalAverage >= 60):
-               document.forms["myform"].elements["finalAverage"].value=(finalAverage + ". " + "The student has a grade of D.");
-               break;
-              
-               case (finalAverage <= 59):
-               document.forms["myform"].elements["finalAverage"].value=(finalAverage + ". " + "The student has a grade of F. Student must retake the course.");
-               break;     
+         totearn = totearn.toFixed(2)
+         
+         document.getElementById("tally1").innerHTML = item1;
+         document.getElementById("total1").innerHTML = "$" + item1tot;
+         
+         document.getElementById("tally2").innerHTML = item2;
+         document.getElementById("total2").innerHTML = "$" + item2tot;
+         
+         document.getElementById("tally3").innerHTML = item3;
+         document.getElementById("total3").innerHTML = "$" + item3tot;
+         
+         document.getElementById("tally4").innerHTML = item4;
+         document.getElementById("total4").innerHTML = "$" +  item4tot;
+         
+         
+         document.getElementById("grandtotal").innerHTML = totamount;
+         document.getElementById("grandearnings").innerHTML = "$" + totearn; 
+         
          }
-         }}
-         
+         }
       </script>
+      <style>
+         .r {text-align: right;}
+      </style>
    <body>
       <main class="grid">
          <header  class="grid-area grid-area-1">
-            <h2> Homework 3 - Part 1 </h2>
+            <h2> Homework 3 - Part 2 </h2>
          </header>
          <nav class="grid-area grid-area-2">
             <ul>
                <li>
-                  <a href="homework1.html" title="CNIT 133 - HW 2">
-                  Return to CNIT 133 Homework 2 - Basic Operations
+                  <a href="homework3.html" title="CNIT 133 - HW 3">
+                  Return to CNIT 133 Homework 3 - Functions
                   </a>
                </li>
             </ul>
          </nav>
          <section class="grid-area grid-area-3">
-            <h1> HW 3 - Part 1 </h1>
-            <h2> Student Grades </h2>
-            <p> Please enter student scores below.</p>
-            <form name="myform">
-            <table>
-               <tr>
-                  <td>Homework Average Score:</td>
-                  <td><input id="hwAvg" type="number" ></td>
-               </tr>
-               <tr>
-                  <td>Mid-term Exam Score:</td>
-                  <td><input id="midExam" type="number" ></td>
-               </tr>
-               <tr>
-                  <td>Final Exam Score:</td>
-                  <td><input id="finalExam" type="number" ></td>
-               </tr>
-               <tr>
-                  <td>Participation Score:</td>
-                  <td><input id="participation" type="number" ></td>
-               </tr>
-            </table>
-            </form>
+            <h1> HW 3 - Part 2 </h1>
+            <h2> Sales Commissions </h2>
+            <label for="salesname">Salesperson's Name:</label>
+            <input id="salesname" name="salesname" title="Please make sure that the salesperson's name is spelled correctly.">
             <br>
             <div id ="inputErr"></div>
             <br>
             <br>
-            <p> Submit results to calculate student's final average .</p>
-            <button onclick="finalGrade()">Submit</button>
-            <br> 
-            <p> The student's final average is: </p>
-            <p>
-               <input type="text" id="finalAverage" readonly="readonly" size="60">
-            </p>
+            <form name="itemtally">
+               <table>
+                  <tr>
+                     <td>Item 1:</td>
+                     <td><input class="r" id="item1" type="number" ></td>
+                  </tr>
+                  <tr>
+                     <td>Item 2:</td>
+                     <td><input class="r" id="item2" type="number" ></td>
+                  </tr>
+                  <tr>
+                     <td>Item 3:</td>
+                     <td><input class="r" id="item3" type="number" ></td>
+                  </tr>
+                  <tr>
+                     <td>Item 4:</td>
+                     <td><input class="r" id="item4" type="number" ></td>
+                  </tr>
+               </table>
+               <br>
+               <button onclick="itemCalc()">Submit</button>
+               <input type="reset"  value="reset" onclick="location.reload()">
+               <br>
+               <br>
+            </form>
+            <p> Input the number of items sold for each item number:</p>
+            <table id ="totaltally">
+               <tr>
+                  <th> Item # </th>
+                  <th> Price </th>
+                  <th> Number Sold </th>
+                  <th>  </th>
+                  <th>Total</th>
+               </tr>
+               <tr>
+                  <td> 1 </td>
+                  <td> $239.99 </td>
+                  <td class="r" id = "tally1" >  </td>
+                  <td></td>
+                  <td class="r" id = "total1" > </td>
+               </tr>
+               <tr>
+               <td>2</td>
+               <td> $129.75 </td>
+               <td class="r" id = "tally2" >  </td>
+               <td></td>
+               <td class="r" id = "total2" > </td>
+               </tr>
+               <tr>
+                  <td> 3 </td>
+                  <td> $99.95 </td>
+                  <td class="r" id = "tally3" >  </td>
+                  <td></td>
+                  <td class="r" id = "total3" > </td>
+               </tr>
+               <tr>
+               <td> 4 </td>
+               <td> $350.89 </td>
+               <td class="r" id = "tally4" >  </td>
+               <td></td>
+               <td class="r" id = "total4" > </td>
+               </tr>
+               <tr>
+                  <td>Total Amount Sold</td>
+                  <td  class="r" id="grandtotal"></td>
+               </tr>
+               <tr>
+                  <td>Total Weekly Earnings</td>
+                  <td  class="r" id="grandearnings"></td>
+               </tr>
+            </table>
          </section>
          <footer class="grid-area grid-area-4">
             <p>
