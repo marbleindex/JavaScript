@@ -14,108 +14,96 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <!--bootstrap    -->
-      
       <!-- jquery validation -->
       <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
-      
       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-   
       <!-- jquery validation -->
-       <script>
-        // $(document).ready(function(){
-    // $("#myform").validate({
-        // Rules for each input item
-        // rules: 
-        // {
-      // item1: { required: true, number: true },
-      // item2: { required: true, number: true },
-      // item3: { required: true, number: true },
-      // item4: { required: true, number: true },
-        // }
-      // });          
-
-      function itemCalc() {
-        // if ($("#myform").valid()) {
-       event.preventDefault();      
-
-      var item1 = parseInt(document.getElementById("item1").value);
-      var item2 = parseInt(document.getElementById("item2").value);
-      var item3 = parseInt(document.getElementById("item3").value);
-      var item4 = parseInt(document.getElementById("item4").value);
-
-      var errMsg = "<span style='font-weight: bold; color: red; font-size: 20px;'> Input is invalid. Only enter positive integers.</span>";
-
-        if (isNaN(item1) || isNaN(item2) || isNaN(item3) || isNaN(item4) || item1 < 0 || item2 < 0 || item3 < 0 || item4 < 0 ) 
-      
-      document.getElementById("inputErr").innerHTML = errMsg;
-   else{
-
-      var item1tot = (item1 * 239.99).toFixed(2);
-      var item2tot = (item2 * 129.75).toFixed(2);
-      var item3tot = (item3 * 239.99).toFixed(2);
-      var item4tot = (item4 * 350.89).toFixed(2);
-
-
-      var totamount = item1 + item2 + item3 + item4;
-      var totearn = parseInt(item1tot) + parseInt(item2tot) + parseInt(item3tot) + parseInt(item4tot);
-
-      totearn = totearn.toFixed(2)
- 
-      document.getElementById("tally1").innerHTML = item1;
-      document.getElementById("total1").innerHTML = "$" + item1tot;
-
-      document.getElementById("tally2").innerHTML = item2;
-      document.getElementById("total2").innerHTML = "$" + item2tot;
-
-      document.getElementById("tally3").innerHTML = item3;
-      document.getElementById("total3").innerHTML = "$" + item3tot;
-       
-      document.getElementById("tally4").innerHTML = item4;
-      document.getElementById("total4").innerHTML = "$" +  item4tot;
-
-
-      document.getElementById("grandtotal").innerHTML = totamount;
-      document.getElementById("grandearnings").innerHTML = "$" + totearn; 
-  
-  }
-   }
-</script>
-
-<style type="text/css">
-   .r {text-align: right;}
-
-</style>
-
- <body>
+      <script>
+         <!-- // $(document).ready(function(){ -->
+         // $("#myform").validate({
+         //     // Rules for each input item
+         //     // rules: 
+         //     {
+         //   item1: { required: true, number: true },
+         //   item2: { required: true, number: true },
+         //   item3: { required: true, number: true },
+         //   item4: { required: true, number: true },
+         //     }
+         //   });          
+         
+         function itemCalc() {
+         // if ($("#myform").valid()) {
+         event.preventDefault();      
+         
+         var item1 = parseInt(document.getElementById("item1").value);
+         var item2 = parseInt(document.getElementById("item2").value);
+         var item3 = parseInt(document.getElementById("item3").value);
+         var item4 = parseInt(document.getElementById("item4").value);
+         
+         var errMsg = "<span style='font-weight: bold; color: red; font-size: 20px;'> Input is invalid. Only enter positive integers.</span>";
+         
+         if (isNaN(item1) || isNaN(item2) || isNaN(item3) || isNaN(item4) || item1 < 0 || item2 < 0 || item3 < 0 || item4 < 0 ) 
+         
+         document.getElementById("inputErr").innerHTML = errMsg;
+         else{
+         
+         var item1tot = (item1 * 239.99).toFixed(2);
+         var item2tot = (item2 * 129.75).toFixed(2);
+         var item3tot = (item3 * 239.99).toFixed(2);
+         var item4tot = (item4 * 350.89).toFixed(2);
+         
+         
+         var totamount = item1 + item2 + item3 + item4;
+         var totearn = parseInt(item1tot) + parseInt(item2tot) + parseInt(item3tot) + parseInt(item4tot);
+         
+         totearn = totearn.toFixed(2)
+         
+         document.getElementById("tally1").innerHTML = item1;
+         document.getElementById("total1").innerHTML = "$" + item1tot;
+         
+         document.getElementById("tally2").innerHTML = item2;
+         document.getElementById("total2").innerHTML = "$" + item2tot;
+         
+         document.getElementById("tally3").innerHTML = item3;
+         document.getElementById("total3").innerHTML = "$" + item3tot;
+         
+         document.getElementById("tally4").innerHTML = item4;
+         document.getElementById("total4").innerHTML = "$" +  item4tot;
+         
+         
+         document.getElementById("grandtotal").innerHTML = totamount;
+         document.getElementById("grandearnings").innerHTML = "$" + totearn; 
+         
+         }
+         }
+      </script>
+      <style type="text/css">
+         .r {text-align: right;}
+      </style>
+   <body>
       <main class="grid">
          <header  class="grid-area grid-area-1">
-            <h1>CNIT 133 Homework 3 - Functions </h1>
+            <h1> Homework 3 - Part 2 </h1>
          </header>
          <nav class="grid-area grid-area-2">
             <ul>
                <li>
-                  <a href="homework1.html" title="CNIT 133 - HW 2">
-                  Return to CNIT 133 Homework 2 - Basic Operations
+                  <a href="homework3.html" title="CNIT 133 - HW 3">
+                  Return to CNIT 133 Homework 3 - Functions
                   </a>
                </li>
             </ul>
          </nav>
-         
-
          <section class="grid-area grid-area-3">
             <h1> HW 3 - Part 2 </h1>
             <h2> Sales Commissions </h2>
-
-           <label for="salesname">Salesperson's Name:</label>
-      <input id="salesname" name="salesname" title="Please make sure that the salesperson's name is spelled correctly.">
-
+            <label for="salesname">Salesperson's Name:</label>
+            <input id="salesname" name="salesname" title="Please make sure that the salesperson's name is spelled correctly.">
             <br>
-                  <div id ="inputErr"></div> 
-
-      <br>
-      <br>
-
+            <div id ="inputErr"></div>
+            <br>
+            <br>
             <form name="itemtally">
                <table>
                   <tr>
@@ -134,17 +122,15 @@
                      <td>Item 4:</td>
                      <td><input class="r" id="item4" type="number" size="10"></td>
                   </tr>
-
                </table>
                <br>
-                  <button onclick="itemCalc()">Submit</button>
-                  <input type="reset"  value="reset" onclick="location.reload()">
+               <button onclick="itemCalc()">Submit</button>
+               <input type="reset"  value="reset" onclick="location.reload()">
                <br>
                <br>
-         </form>
-
-         <p> Input the number of items sold for each item number:</p>
-           <table id ="totaltally">
+            </form>
+            <p> Input the number of items sold for each item number:</p>
+            <table id ="totaltally">
                <tr>
                   <th> Item # </th>
                   <th> Price </th>
@@ -158,39 +144,36 @@
                   <td class="r" id = "tally1" >  </td>
                   <td></td>
                   <td class="r" id = "total1" > </td>
-            </tr>
-                  <td>2</td>
-                  <td> $129.75 </td>
-                  <td class="r" id = "tally2" >  </td>
-                  <td></td>
-                  <td class="r" id = "total2" > </td>
-            <tr>
+               </tr>
+               <td>2</td>
+               <td> $129.75 </td>
+               <td class="r" id = "tally2" >  </td>
+               <td></td>
+               <td class="r" id = "total2" > </td>
+               <tr>
                   <td> 3 </td>
                   <td> $99.95 </td>
                   <td class="r" id = "tally3" >  </td>
                   <td></td>
                   <td class="r" id = "total3" > </td>
-            </tr>
-            </tr>
-                  <td> 4 </td>
-                  <td> $350.89 </td>
-                  <td class="r" id = "tally4" >  </td>
-                  <td></td>
-                  <td class="r" id = "total4" > </td>
-            <tr>
-            <tr>
+               </tr>
+               </tr>
+               <td> 4 </td>
+               <td> $350.89 </td>
+               <td class="r" id = "tally4" >  </td>
+               <td></td>
+               <td class="r" id = "total4" > </td>
+               <tr>
+               <tr>
                   <td>Total Amount Sold</td>
                   <td class="r" id="grandtotal"></td>
-            </tr>
-            <tr>
+               </tr>
+               <tr>
                   <td>Total Weekly Earnings</td>
-                  <td class="r" id="grandearnings"></td> 
-            </tr>
-      </table>
-           
+                  <td class="r" id="grandearnings"></td>
+               </tr>
+            </table>
          </section>
-         
-
          <footer class="grid-area grid-area-4">
             <p>
                &#169; 2020 Kristian Reyes 
