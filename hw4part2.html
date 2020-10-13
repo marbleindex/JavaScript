@@ -1,89 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!--Kristian Reyes 10/10/2020 -->
-		<title>CNIT 133 Homework 4</title>
-		<meta charset="utf-8">
-			<meta name="description" content="homework 4 for CCSF CNIT 133">
-				<meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
-					<meta name="author" content="Kristian Reyes">
-						<meta name="viewport" content="width=device-width, initial-scale=1">
-							<!--bootstrap 	 -->
-							<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-								<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-								<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-								<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-								<!--bootstrap 	 -->
-								<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="jquery-1.2.6.min.js"></script>
-
-<script>
-      $(function() {
-        $("table tr:nth-child(even)").addClass("striped");
-      });
-    </script>
-
-    <style>
-      body,td {
-        font-size: 10pt;
-      }
-      table {
-        background-color: black;
-        border: 1px black solid;
-        border-collapse: collapse;
-      }
-      th {
-        border: 1px outset silver;
-        background-color: #800000;
-        color: white;
-      }
-      tr {
-        background-color: #ff7f50;
-        margin: 1px;
-      }
-      tr.striped {
-        background-color: #ffff00;
-      }
-      td {
-        padding: 1px 8px;
-      }
-    </style>
-
-<script>	
-function calcInterest() {
-	var principal = 1000;
-	var rate = 0.05;
-	var amount = 0;
-	
-	while(rate <= 0.07){
-		document.writeln("<table><tr><th> Year </th><th> Amount on Deposit </th><th> Interest Rate </th></tr><br>");
-		
-		for(i=1; i<=10; i++){
-			amount = principal * Math.pow((1+rate),i);
-			document.writeln("<tr><td> "+ i +" </td><td> "+ amount.toFixed(2) +" </td><td> "+ rate.toFixed(2) +" </td></tr>");
-		}
-		document.writeln("<table>");
-		rate+=0.01;
-	}
-}
-</script>
-
-
-
-
-							</head>
-							
-
-					<body>
-
-
+   <head>
+      <!--Kristian Reyes 10/10/2020 -->
+      <title>CNIT 133 Homework 4</title>
+      <meta charset="utf-8">
+      <meta name="description" content="homework 4 for CCSF CNIT 133">
+      <meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
+      <meta name="author" content="Kristian Reyes">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--bootstrap 	 -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--bootstrap 	 -->
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+         $(function() {  // jquery function to create alternating table colors
+           $("table tr:nth-child(even)").addClass("striped");
+         });
+      </script>
+      <style>       /* table styling */
+         body,td {
+         font-size: 10pt;
+         }
+         table {
+         background-color: black;
+         border: 1px black solid;
+         border-collapse: collapse;
+         }
+         th {
+         border: 1px outset silver;
+         background-color: #800000;
+         color: white;
+         }
+         tr {
+         background-color: #ff7f50;
+         margin: 1px;
+         }
+         tr.striped {  /* alternate table color using jquery function */
+         background-color: #ffff00;
+         }
+         td {
+         padding: 1px 8px;
+         }
+      </style>
+      <script>	
+         function calcInterest() {   //function to calculate interest rates
+         	var principal = 1000; //starting principal
+         	var rate = 0.05;  //starting rate
+         	var amount = 0;  
+         
+         	// Amount = Principal * (1 + rate) number of years (exp) 
+         	
+         	while(rate <= 0.07){  // while rate is 7% or below
+         		document.writeln("<table><tr><th> Year </th><th> Amount on Deposit </th><th> Interest Rate </th></tr><br>"); //creates table header row 
+         		
+         		for(n=1; n<=10; n++){  // starts at 1 year, stops at year 10, increments by one year each loop
+         			amount = principal * Math.pow((1 + rate), n);  // math module to get exponent functionality
+         			document.writeln("<tr><td> "+ n +" </td><td> "+ amount.toFixed(2) +" </td><td> "+ rate.toFixed(2) +" </td></tr>"); // fixed at two decimal points
+         		}
+         		document.writeln("<table>");
+         		rate+=0.01;
+         	}
+         }
+      </script>
+   </head>
+   <body>
       <main class="grid">
          <header  class="grid-area grid-area-1">
             <h2> Homework 4 - Part 2 </h2>
          </header>
-         
-
          <nav class="grid-area grid-area-2">
             <ul>
                <li>
@@ -93,33 +81,21 @@ function calcInterest() {
                </li>
             </ul>
          </nav>
-
-
-
-									<section class="grid-area grid-area-3">
-										<h2> Compound Interest </h2>
-									<h3> Compound Interest on a Principal of $1000 for %5 to %7 Interest Rates
-<br>
-						
-			<script> 
-calcInterest();
-
-
-</script>							
-
-								
-									</section>
-
-
-
-
-
-
-									<footer class="grid-area grid-area-4">
-										<p>
-					&#169; 2020 Kristian Reyes 
-				</p>
-									</footer>
-								</main>
-							</body>
-						</html>
+         <section class="grid-area grid-area-3">
+            <h2> Compound Interest </h2>
+            <h3> Principal of $1000 for %5, %6, and %7 Interest Rates </h3>
+            <br>
+            <script> 
+               calcInterest(); 
+               
+               
+            </script>							
+         </section>
+         <footer class="grid-area grid-area-4">
+            <p>
+               &#169; 2020 Kristian Reyes 
+            </p>
+         </footer>
+      </main>
+   </body>
+</html>
