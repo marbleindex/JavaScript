@@ -1,38 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!--Kristian Reyes 10/10/2020 -->
-		<title>CNIT 133 Homework 4</title>
-		<meta charset="utf-8">
-			<meta name="description" content="homework 4 for CCSF CNIT 133">
-				<meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
-					<meta name="author" content="Kristian Reyes">
-						<meta name="viewport" content="width=device-width, initial-scale=1">
-							<!--bootstrap 	 -->
-							<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-								<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-								<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-								<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-								<!--bootstrap 	 -->
-								<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#draggable" ).draggable();
-  } );
-  </script>
-							</head>
-							
-
-					<body>
-
-
+   <head>
+      <!--Kristian Reyes 10/10/2020 -->
+      <title>CNIT 133 Homework 4</title>
+      <meta charset="utf-8">
+      <meta name="description" content="homework 4 for CCSF CNIT 133">
+      <meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
+      <meta name="author" content="Kristian Reyes">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--bootstrap 	 -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--bootstrap 	 -->
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+         $( function() {
+           $( "#draggable" ).draggable();  //jquery UI draggable
+         } );
+      </script>
+   </head>
+   <body>
       <main class="grid">
          <header  class="grid-area grid-area-1">
             <h2> Homework 4 - Part 1 </h2>
          </header>
-         
-
          <nav class="grid-area grid-area-2">
             <ul>
                <li>
@@ -42,74 +36,57 @@
                </li>
             </ul>
          </nav>
-
-
-
-									<section class="grid-area grid-area-3">
-										<h2> JS For Statements </h2>
-									
-
-										
-										 
-
-								<script>
-								  
-								  var sum = 0;
-								  var product = 1;
-								 
-
-								  for ( var number = 5; number <= 21; number += 4 )
-								  { 
-								     sum += number;
-								  }
-
-								  document.write("The sum of every fourth integer from 5 to 21 inlusive is " + sum + "."); 
-								  document.write("<br>");
-								
-								   for ( var number = 5; number <= 21; number += 4 )
-								  { 
-								     product = product * number;
-								  }
-
-								  document.write("The product of every every fourth integer from 5 to 21 inclusive is " + product + "." ); 
-
-								</script>		
-										<br>
-										<br>
-
-
-	<script>
-		var product, sum, x;
-          product = 1;
-          x = 3;
-          sum = 0;	
-		
-         while   (x <= 21 ) {
-	      product *= x;
-              sum += x;
-	      	x = x + 3;		
-                            }
-         document.write( "<h2>While loop - Product and Sum </h2>" );
-         document.write( "<br>The product of every third integer from 3 to 21 inclusive is " + product + ".");
-         document.write( "<br>The sum of every third integer from 3 to 21 inclusive is " + sum + ".");
-
-
-	</script>
-<br>
-<br>
-								
-									</section>
-
-
-
-
-
-
-									<footer class="grid-area grid-area-4">
-										<p id="draggable">
-					&#169; 2020 Kristian Reyes 
-				</p>
-									</footer>
-								</main>
-							</body>
-						</html>
+         <section class="grid-area grid-area-3">
+            <h2> JS For Statements </h2>
+            <script>  // logic for For Statements
+               var sum = 0;
+               var product = 1;
+               
+               
+               for ( var number = 5; number <= 21; number += 4 )   // start at 5, end loop at 21, increment number by four
+               { 
+                  sum += number;  // sum of every fourth integer
+               }
+               
+               document.write("The sum of every fourth integer from 5 to 21 inclusive is " + sum + "."); // prints for statement sum value
+               document.write("<br>");
+               
+                for ( var number = 5; number <= 21; number += 4 ) //start at 5, end loop at 21, increment by four
+               { 
+                  product = product * number; // product of every fourth integer
+               }
+               
+               document.write("The product of every every fourth integer from 5 to 21 inclusive is " + product + "." ); // prints for statement product value
+               
+            </script>		
+            <br>
+            <br>
+            <script>
+               var product, sum, x;  // create variables product, sum, starting number variables for while loop
+                       product = 1; // division by 0 does not work
+                       x = 3; // start at three for every third integer
+                       sum = 0;	
+               
+                      while   (x <= 21 ) {   // add breakpoint once number reaches 21
+                    product *= x;  // multiply 
+                           sum += x;  // add
+                    	x = x + 3;	// increment by three
+                                         }
+                      document.write( "<h2>While loop - Product and Sum </h2>" );
+                      document.write( "<br>The product of every third integer from 3 to 21 inclusive is " + product + "."); // prints for statement product value
+                      document.write( "<br>The sum of every third integer from 3 to 21 inclusive is " + sum + "."); // prints for statement sum value
+               
+               
+            </script>
+            <br>
+            <br>
+         </section>
+         <footer class="grid-area grid-area-4">
+            <p id="draggable">
+               <!-- draggable element -->
+               &#169; 2020 Kristian Reyes 
+            </p>
+         </footer>
+      </main>
+   </body>
+</html>
