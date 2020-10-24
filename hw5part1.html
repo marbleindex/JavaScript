@@ -8,19 +8,45 @@
       <meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
       <meta name="author" content="Kristian Reyes">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!--bootstrap 	 -->
+      <!--bootstrap    -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-      <!--bootstrap 	 -->
+      <!--bootstrap    -->
       
+      <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+  $("#myform").validate({
+
+    messages: {
+      favcolor: "Please enter your favorite color",
+      mood: "Please choose a mood",
+      needs: "Please choose at least one need",
+      vacation: "Please choose a destination",
+      },
+
+      errorPlacement: function(error, element) {
+  if ( element.is(":radio") || element.is(":checkbox")) {
+    error.appendTo( element.parent());
+  } else {
+    error.insertAfter(element);
+  }
+  } // end errorPlacement
+ });
+});
+
+</script>
    </head>
 
    <body>
       <main class="grid">
          <header  class="grid-area grid-area-1">
             <h2> Homework 5 - Part 1 </h2>
+
          </header>
          <nav class="grid-area grid-area-2">
             <ul>
@@ -33,48 +59,53 @@
          </nav>
          <section class="grid-area grid-area-3">
             <h2> Part 1</h2>
-            
+             <h3> Please fill out the questionnnaire:</h3>
+
+<form id="myform" name="myform">            
 <table>
-	<tr>
-		<td>Favorite Color:</td> 
-  <td><input type="text" name="favcol" id="favcol" size="30"></td>
-</tr>
-<tr>
-  	<td>Mood?</td> 
-  </tr>
   <tr>
-  <td><input type="radio" name="feeling">Excellent</td>
-<td><input type="radio" name="feeling">Good</td>
-<td><input type="radio" name="feeling">Average</td>
-<td><input type="radio" name="feeling">Poor</td>
+    <td>Favorite Color:</td> 
+  <td><input type="text" name="favcolor" id="favcolor" class="required" autofocus></td>
 </tr>
 <tr>
-	<td>Which of the following do you need?</td>
+    <td>Your Current Mood?</td> 
+
+<td>Excellent<input type="radio" id="mood1" name="mood" class="required" value="excellent">
+   Good<input type="radio" id="mood2" name="mood" class="required" value="good"> Average <input type="radio" id="mood3" name="mood" class="required" value="average">
+    Poor<input type="radio" id="mood4" name="mood" class="required" value="poor">
+
+ 
+</td>
 </tr>
 <tr>
-	<input type="checkbox" id="food" name="food">
-  <label for="food">Food</label>
-  <input type="checkbox" id="sleep" name="sleep">
-  <label for="sleep">Sleep</label>
-  <input type="checkbox" id="money" name="money">
-  <label for="money">Money</label>
-  <input type="checkbox" id="love" name="love">
-  <label for="love">Love</label>
+  <td>Which of the following do you need?</td>
+
+<td>Food<input type="checkbox" id="need1" name="needs" value="food" class="required">
+   Sleep<input type="checkbox" id="need2" value="sleep" name="needs">Money<input type="checkbox" id="need3" value="money" name="needs">Love<input type="checkbox" id="need3" value="love" name="needs">
+</td>
 </tr>
 <tr>
-	<td>Where would you like to travel to?</td>
-<select name="status">
+     <td><label for="vacation" class="label">Where would you like to travel to?</label></td>
+<td>
+     <select name="vacation" id="vacation" class="required">
 <option value=" ">SELECT ONE</option>
 <option value="fiji">Fiji</option>
 <option value="Italy">Italy</option>
 <option value="Egypt">Egypt</option>
 <option value="China">China</option>
 <option value="Peru">Peru</option>
-<option value="other">other</option>
+<option value="other">Other</option>
 </select>
+</td>
+</tr>
+<tr>
+  <td>
+<input type="submit"  value="SUBMIT">
+<input type="reset" value="RESET ALL" onclick="window.location.reload();">
+</td>
 </tr>
 </table>
-
+</form>
             
          
          </section>
