@@ -15,6 +15,13 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <!--bootstrap 	 -->
       
+
+      <script>
+function openDestination(myForm) {
+    var myURL = myForm.navlist.options[myForm.navlist.selectedIndex].value;
+    window.location = myURL;
+}
+</script>
    </head>
    <body>
       <main class="grid">
@@ -31,9 +38,34 @@
             </ul>
          </nav>
          <section class="grid-area grid-area-3">
-            <h2> HOMEWORK 2</h2>
+            <h2> Pulldown Menu Navigation</h2>
             
-            
+<form>
+<h3>Choose a travel site!</h3>
+<select name="navlist" onChange="goToNewPage(this.form);">
+<option>Select one</option>
+<option value="https://www.expedia.com/">Expedia</option>
+<option value="https://www.travelocity.com/">Travelocity</option>
+<option value="https://www.kayak.com/">Kayak</option>
+</select>
+</form>
+
+<br><br>
+
+<form>
+<h3>Choose a music site!</h3>
+<select name="navlist">
+<option>Select one</option>
+<option value="https://www.spotify.com/us/">Spotify</option>
+<option value="https://bandcamp.com/">Bandcamp</option>
+<option value="https://tidal.com/">Tidal</option>
+
+</select>
+<input type="button" value="Go" onClick="openDestination(this.form);">
+</form>
+
+
+
          
          </section>
          <footer class="grid-area grid-area-4">
