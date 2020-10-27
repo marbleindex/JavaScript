@@ -15,13 +15,55 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <!--bootstrap 	 -->
       
+<script>
+var statesArray = 
+              [ ["AL", "Alabama", "Montgomery", "4,887,871"],      
+                ["AK", "Alaska", "Juneau", "737,438"],  
+                ["AZ", "Arizona", "Phoenix", "7,171,646"],
+                ["AR", "Arkansas", "Little Rock", "3,010,825"], 
+                ["CA", "California", "Sacramento",  "39,557,045"],
+                ["CO", "Colorado", "Denver", "5,694,564"] ];       
+
+function InputValidate()
+  {   
+    var searchKey = document.forms["InputForm"].elements["inputState"].value;  //get searchkey from form input box
+    searchKey = searchKey.toUpperCase();     //change search key to upper case
+    
+    var locatedkey = false;
+    for (var row = 0; row < statesArray.length; row++) //loop for 4 rows
+     {
+     if ((statesArray[row][0] == searchKey) || (statesArray[row][1] == searchKey))
+
+                 //check if search key = 1st or 2nd element of each row
+     { 
+
+                //if search key = 1st or 2nd element of a particular row
+                //then place in input boxes for price and comment, that is, the 3rd and 4th elements
+
+       document.forms["InputForm"].elements["statedata"].value = 
+
+ "State abbr = " + statesArray[row][0] +"\n" + "State Name = " + statesArray[row][1] +"\n" + "Capital = " + statesArray[row][2] + "\n"  + "Population = " + statesArray[row][3];
+       
+
+       row = statesArray.length;   //ends loop if match found
+       locatedkey = true;
+     }
+    }
+
+  if ( locatedkey == false ) {
+   document.forms["InputForm"].elements["comment"].value= "State not found!"; 
+ 
+       }
+
+  }
+</script>
    </head>
    <body>
       <main class="grid">
          <header  class="grid-area grid-area-1">
             <h2> Homework 5 - Part 3 </h2>
          </header>
-         <nav class="grid-area grid-area-2">
+               <nav class="grid-area grid-area-2">
             <ul>
                <li>
                   <a href="homework5.html" title="CNIT 133 - HW 5 ">
@@ -31,9 +73,36 @@
             </ul>
          </nav>
          <section class="grid-area grid-area-3">
-            <h2> HOMEWORK 3</h2>
-            
-            
+            <h2> States Data</h2>
+<p>         
+Please type in the initials of one of the following states to retrieve data for:
+<ul><li>AL (Alabama)</li>
+<li>AK (Alaska)</li>
+<li>AZ (Arizona)</li>
+<li>AR (Arkansas)</li>
+<li>CA (California)</li>
+<li>CO (Colorado)</li>
+            </p>
+
+
+<br>
+<form name="InputForm">
+<input type="text" name="inputState" autofocus> 
+<input onclick="InputValidate();" type="button" value="State Info" name="State Info" id="search">
+<input type="reset" value="Reset" onclick="location.reload();">
+<br>
+<br>
+<label for="statedata">Thanks for your inquiry, here is the information you requested:</label>
+<br>
+<textarea id="statedata" name="statedata" rows="5" cols="50">
+
+</textarea>
+<br><br>
+Comment<br>
+<input type="text" name="comment" id="comment"><br><br>
+</form>
+
+
          
          </section>
          <footer class="grid-area grid-area-4">
@@ -44,4 +113,4 @@
          </footer>
       </main>
    </body>
-</html>
+</html> 
