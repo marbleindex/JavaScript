@@ -12,41 +12,37 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/ bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <!--bootstrap    -->
-      
-      <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
-
-<script>
-$(document).ready(function(){
-
-  $("#myform").validate({
-
-    messages: {
-      favcolor: "Please enter your favorite color",
-      mood: "Please choose a mood",
-      needs: "Please choose at least one need",
-      vacation: "Please choose a destination",
-      },
-
-      errorPlacement: function(error, element) {
-  if ( element.is(":radio") || element.is(":checkbox")) {
-    error.appendTo( element.parent());
-  } else {
-    error.insertAfter(element);
-  }
-  } 
- });
-});
-
-</script>
+      <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script> <!-- Validate Jquery -->
+      <script>
+         $(document).ready(function(){
+         
+           $("#myform").validate({
+         // Messages to include if input is missing
+             messages: {     
+               favcolor: "Please enter your favorite color",
+               mood: "Please choose a mood",
+               needs: "Please choose at least one need",
+               vacation: "Please choose a destination",
+               },
+         
+               errorPlacement: function(error, element) {   // for proper location of error messages
+           if ( element.is(":radio") || element.is(":checkbox")) {
+             error.appendTo( element.parent());
+           } else {
+             error.insertAfter(element);
+           }
+           } 
+          });
+         });
+         
+      </script>
    </head>
-
    <body>
       <main class="grid">
          <header  class="grid-area grid-area-1">
             <h2> Homework 5 - Part 1 </h2>
-
          </header>
          <nav class="grid-area grid-area-2">
             <ul>
@@ -59,59 +55,52 @@ $(document).ready(function(){
          </nav>
          <section class="grid-area grid-area-3">
             <h2> Part 1</h2>
-             <h3> Please fill out the questionnnaire:</h3>
-
-<form action="hw5part1validation.html" method="post" id="myform" name="myform">            
-<table>
-  <tr>
-    <td>Favorite Color:</td> 
-  <td><input type="text" name="favcolor" id="favcolor" class="required" autofocus></td>
-</tr>
-<tr>
-    <td>Your Current Mood?</td> 
-
-<td>Excellent<input type="radio" id="mood1" name="mood" class="required" value="excellent">
-   Good<input type="radio" id="mood2" name="mood" class="required" value="good"> Average <input type="radio" id="mood3" name="mood" class="required" value="average">
-    Poor<input type="radio" id="mood4" name="mood" class="required" value="poor">
-
- 
-</td>
-</tr>
-<tr>
-  <td>Which of the following do you need?</td>
-
-<td>Food<input type="checkbox" id="need1" name="needs" value="food" class="required">
-   Sleep<input type="checkbox" id="need2" value="sleep" name="needs">Money<input type="checkbox" id="need3" value="money" name="needs">Love<input type="checkbox" id="need3" value="love" name="needs">
-</td>
-</tr>
-<tr>
-     <td><label for="vacation" class="label">Where would you like to travel to?</label></td>
-<td>
-     <select name="vacation" id="vacation" class="required">
-<option value=" ">SELECT ONE</option>
-<option value="fiji">Fiji</option>
-<option value="Italy">Italy</option>
-<option value="Egypt">Egypt</option>
-<option value="China">China</option>
-<option value="Peru">Peru</option>
-<option value="other">Other</option>
-</select>
-</td>
-</tr>
-<tr>
-  <td>
-<input type="submit"  value="SUBMIT">
-<input type="reset" value="RESET ALL" onclick="window.location.reload();">
-</td>
-</tr>
-</table>
-</form>
-            
-         
+            <h3> Please fill out the questionnnaire:</h3>
+            <form action="hw5part1validation.html" method="post" id="myform" name="myform">
+               <!-- Post method works on local but not on github (405 Not Allowed Error) -->        
+               <table>
+                  <tr>
+                     <td>Favorite Color:</td>
+                     <td><input type="text" name="favcolor" id="favcolor" class="required" autofocus></td>
+                  </tr>
+                  <tr>
+                     <td>Your Current Mood?</td>
+                     <td>Excellent<input type="radio" id="mood1" name="mood" class="required" value="excellent">
+                        Good<input type="radio" id="mood2" name="mood" class="required" value="good"> Average <input type="radio" id="mood3" name="mood" class="required" value="average">
+                        Poor<input type="radio" id="mood4" name="mood" class="required" value="poor">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>Which of the following do you need?</td>
+                     <td>Food<input type="checkbox" id="need1" name="needs" value="food" class="required">
+                        Sleep<input type="checkbox" id="need2" value="sleep" name="needs">Money<input type="checkbox" id="need3" value="money" name="needs">Love<input type="checkbox" id="need4" value="love" name="needs">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><label for="vacation" class="label">Where would you like to travel to?</label></td>
+                     <td>
+                        <select name="vacation" id="vacation" class="required">
+                           <option value=" ">SELECT ONE</option>
+                           <option value="fiji">Fiji</option>
+                           <option value="Italy">Italy</option>
+                           <option value="Egypt">Egypt</option>
+                           <option value="China">China</option>
+                           <option value="Peru">Peru</option>
+                           <option value="other">Other</option>
+                        </select>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <input type="submit"  value="SUBMIT">
+                        <input type="reset" value="RESET ALL" onclick="window.location.reload();">
+                     </td>
+                  </tr>
+               </table>
+            </form>
          </section>
          <footer class="grid-area grid-area-4">
             <p>
-               
                &#169; 2020 Kristian Reyes 
             </p>
          </footer>
