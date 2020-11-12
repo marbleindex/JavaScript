@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!--Kristian Reyes 11/10/2020 -->
+      <title>CNIT 133 Homework 6</title>
+      <meta charset="utf-8">
+      <meta name="description" content="homework 6 for CCSF CNIT 133">
+      <meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
+      <meta name="author" content="Kristian Reyes">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--bootstrap    -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--bootstrap    -->
+    
+<script>
+
+         function charFinder()
+         {
+            var count=0;
+            
+            var key=document.getElementById("searchchar").value.charAt( 0 );
+             
+           
+            var stringToSearch=document.getElementById("userinput").value;
+  
+                        
+             for (i=0; i < stringToSearch.length; i++)
+                     {
+
+                    if (stringToSearch.charAt(i) == key)
+                             count++;     
+                     }         
+      
+            if ( count == 0 )
+            passData();
+          
+
+             else{
+               document.getElementById("results").value=count + 
+                  " occurrence(s) of " + key + " found";
+             }
+         
+
+         function passData()
+{
+
+
+// assemble HTML to pump into new window:
+
+var myText = "<html>\n";
+myText += "<head>\n";
+myText += "<title>Popup Window</title>\n";
+myText += "</head>\n";
+myText += "<body>\n";
+myText += "<div style='margin:0 auto;'>\n";
+myText += "<p><strong>Search character " + key + " not found in text string!</p>\n";
+myText += "<input type='button' value='Close Window' onclick='window.close()'>\n";
+myText += "</div>\n";
+myText += "</body>\n";
+myText += "</html>";
+
+// open window on the upperleft of the screen
+
+var newWindow = window.open("", "new_window",
+"top=100,left=100,width=300,height=100");
+
+// have browser focus on window
+
+newWindow.focus();
+
+// pump html into to this new opened window
+
+newWindow.document.write(myText);
+
+// tell browser that newWindow document is finished loading
+
+newWindow.document.close();
+}}
+</script> 
+     
+      
+   </head>
+   <body>
+      <main class="grid">
+         <header  class="grid-area grid-area-1">
+            <h2> Homework 6 - Part 2 </h2>
+         </header>
+         <nav class="grid-area grid-area-2">
+            <ul>
+               <li>
+                  <a href="homework6.html" title="CNIT 133 - HW 6 ">
+                  Return to CNIT 133 Homework 6 - Objects
+                  </a>
+               </li>
+            </ul>
+         </nav>
+         <section class="grid-area grid-area-3">
+            <h2> Part 2</h2>
+<p> Please input several lines of text below: </p>
+<textarea name="userinput" form="myForm" rows="8" id="userinput"  ></textarea>
+<br>
+<br>
+<form name="myForm">
+         Enter a search character: <br>
+         <input type="text" size="30" id="searchchar"> 
+         <input type="button" value="Submit" onclick="charFinder()">
+        <input type="reset" value="Reset" onClick="location.reload();">
+      </form>
+<br>
+<br> 
+<textarea name="results" form="results" id="results" rows="3" readonly>IF FOUND PLACE OCCURRENCES HERE</textarea>
+
+            
+         </section>
+         <footer class="grid-area grid-area-4">
+            <p>
+               &#169; 2020 Kristian Reyes 
+            </p>
+         </footer>
+      </main>
+   </body>
+</html>
