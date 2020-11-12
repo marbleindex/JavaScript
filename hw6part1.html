@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!--Kristian Reyes 11/10/2020 -->
+      <title>CNIT 133 Homework 6</title>
+      <meta charset="utf-8">
+      <meta name="description" content="homework 6 for CCSF CNIT 133">
+      <meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
+      <meta name="author" content="Kristian Reyes">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--bootstrap    -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--bootstrap    -->
+      
+   
+       
+<script>
+           
+         function calcNumber()
+         {
+          var errMsg = "Invalid input, try again.";
+
+
+          if ( isNaN(document.getElementById("number").value) || 
+
+            document.getElementById("number").value.length < 4 ||
+            (document.getElementById("number").value) == "" )
+              {
+               document.getElementById("errMsg").innerHTML = errMsg;
+
+              }
+            else {
+
+            var sourcenum = parseFloat
+               (document.getElementById("number").value);
+
+            document.myForm.output.value = 
+               "The number you entered is: " + sourcenum +
+               "\n Your number rounded to the nearest integer: " + 
+                  integerRound( sourcenum ) +
+               "\n The square root of your number, rounded to an integer: " + 
+                  squareRound( sourcenum ) +
+               "\n Your number rounded to the nearest tenth: " + 
+                  tenthsRound( sourcenum ) +
+               "\n Your number rounded to the nearest hundredth: " + 
+                  hundredthsRound( sourcenum ) +
+               "\n Your number rounded to the nearest thousandth: " + 
+                  thousandthsRound( sourcenum );
+                     
+                 }
+
+          }
+
+         function integerRound( number )
+         {
+            return( Math.round( number) );
+         }
+
+         function squareRound( number )
+         {
+            ( Math.sqrt( number) );
+             return number.toFixed(1);
+         }
+
+         function tenthsRound( number )
+         {
+            ( Math.floor( number * 100 + .5 ) / 10 );
+            return number.toFixed(2);
+         }
+
+         function hundredthsRound( number )
+         {
+            ( Math.floor( number * 100 + .5 ) / 100 );
+            return number.toFixed(3);
+          }
+        function thousandthsRound( number )
+           {
+            ( Math.floor( number * 100 +.5) / 1000 );
+            return number.toFixed(4);
+           }
+
+        function res() {    
+                       document.getElementById("errMsg").innerHTML="";
+                       document.getElementById("number").focus();
+                       }
+</script>
+
+
+
+
+      
+   </head>
+   <body onload="document.getElementById('number').focus();">
+      <main class="grid">
+         <header  class="grid-area grid-area-1">
+            <h2> Homework 6 - Part 1 </h2>
+         </header>
+         <nav class="grid-area grid-area-2">
+            <ul>
+               <li>
+                  <a href="homework6.html" title="CNIT 133 - HW 6 ">
+                  Return to CNIT 133 Homework 6 - Objects
+                  </a>
+               </li>
+            </ul>
+         </nav>
+         <section class="grid-area grid-area-3">
+            <h2> Part 1</h2>
+          <div id ="errMsg"></div>
+
+<form name="myForm">
+         Enter a number with at least 4 decimal positions: <br>
+         <input type="text" size="30" id="number"> 
+         <input type="button" value="Submit" onclick="calcNumber()"><br>
+         <textarea name = "output" rows = "8" cols = "60" readonly>
+         </textarea><br>   
+
+        <input type="reset" value="Reset" onClick="res();">
+      </form>
+     
+
+
+
+         </section>
+         <footer class="grid-area grid-area-4">
+            <p>
+               &#169; 2020 Kristian Reyes 
+            </p>
+         </footer>
+      </main>
+   </body>
+</html>
