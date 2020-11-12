@@ -22,10 +22,10 @@
             var count=0;
             
             var key=document.getElementById("searchchar").value.charAt( 0 );
-             
+             var key=key.toUpperCase();
            
             var stringToSearch=document.getElementById("userinput").value;
-  
+            var stringToSearch=stringToSearch.toUpperCase();
                         
              for (i=0; i < stringToSearch.length; i++)
                      {
@@ -111,7 +111,7 @@ newWindow.document.close();
       </form>
 <br>
 <br> 
-<textarea name="results" form="results" id="results" rows="3" readonly>IF FOUND PLACE OCCURRENCES HERE</textarea>
+<textarea name="results" form="results" id="results" rows="3" readonly></textarea>
 
             
          </section>
