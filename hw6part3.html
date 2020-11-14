@@ -14,50 +14,42 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <!--bootstrap    -->
-     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"
-></script>
-
-
-   <script>
-    $(document).ready(function(){
-
-  $('.phone').mask('(000) 000-0000');
- 
-       });   
-
- </script>
-
- <script>
-  
-
-
-function parseNumber()
-{
-   var phoneNumber = document.getElementById("phone").value
-   
-   var area  = phoneNumber.split('(')[1].split(')')[0];
-
-   var three  = phoneNumber.split(' ')[1].split('-')[0];
-   
-   var four = + phoneNumber.split(' ')[1].split('-')[1];
-   
-
-
-document.getElementById("areacode").value = "The area code is " + area;
-document.getElementById("firstthree").value = "The first three numbers are " + three;
-
-document.getElementById("lastfour").value = "The last four numbers are " + four;
-
-
-};
- </script>
-      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"
+         ></script>
+      <script>
+         $(document).ready(function(){
+         
+         $('.phone').mask('(000) 000-0000');
+         
+            });   
+         
+      </script>
+      <script>
+         function parseNumber()
+         {
+            var phoneNumber = document.getElementById("phone").value
+            
+            var area  = phoneNumber.split('(')[1].split(')')[0];
+         
+            var three  = phoneNumber.split(' ')[1].split('-')[0];
+            
+            var four = + phoneNumber.split(' ')[1].split('-')[1];
+            
+         
+         document.getElementById("areacode").value = "The area code is " + area;
+         document.getElementById("firstthree").value = "The first three numbers are " + three;
+         
+         document.getElementById("lastfour").value = "The last four numbers are " + four;
+         
+         
+         };
+          
+      </script>
    </head>
    <body>
       <main class="grid">
          <header  class="grid-area grid-area-1">
-            <h2> Homework 6 - Part 1 </h2>
+            <h2> Homework 6 - Part 3 </h2>
          </header>
          <nav class="grid-area grid-area-2">
             <ul>
@@ -70,28 +62,21 @@ document.getElementById("lastfour").value = "The last four numbers are " + four;
          </nav>
          <section class="grid-area grid-area-3">
             <h2> Part 3</h2>
-
-<form name="myForm" action="">
-
-<h3>Enter a telephone number:</h3> 
-
-<p>
-<label>Phone Number:
-    <input type="text" id="phone" name="phone" class="phone" />
-  </label>
-<br><br>   
-<input type="button" value="Go" onclick="parseNumber()">
-<input type="reset" value="Reset" onclick="location.reload();">
-</p>
-
-<h3>Sections of your number:</h3>
-<textarea name="areacode" id="areacode" rows="3" cols="30" readonly></textarea>
-<textarea name="firstthree" id="firstthree" rows="3" cols="30" readonly></textarea>
-<textarea name="lastfour" id="lastfour" rows="3" cols="30" readonly></textarea>
-
-            
-            
-            
+            <form name="myForm">
+               <h3>Enter a telephone number:</h3>
+               <p>
+                  <label>Phone Number:
+                  <input type="text" id="phone" name="phone" class="phone" />
+                  </label>
+                  <br><br>   
+                  <input type="button" value="Go" onclick="parseNumber()">
+                  <input type="reset" value="Reset" onclick="location.reload();">
+               </p>
+            </form>
+            <h3>Sections of your number:</h3>
+            <textarea name="areacode" id="areacode" rows="3" cols="30" readonly></textarea>
+            <textarea name="firstthree" id="firstthree" rows="3" cols="30" readonly></textarea>
+            <textarea name="lastfour" id="lastfour" rows="3" cols="30" readonly></textarea>
          </section>
          <footer class="grid-area grid-area-4">
             <p>
