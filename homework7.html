@@ -1,88 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!--Kristian Reyes 11/22/2020 -->
-		<title>CNIT 133 Homework </title>
-		<meta charset="utf-8">
-			<meta name="description" content="homework 7 for CCSF CNIT 133">
-				<meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
-					<meta name="author" content="Kristian Reyes">
-						<meta name="viewport" content="width=device-width, initial-scale=1">
-							<!--bootstrap 	 -->
-							<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-								<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-								<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-								<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-								<!--bootstrap 	 -->
-						<script  src="https://code.jquery.com/jquery-1.7.1.js"></script>
-
-						<script>
-$(document).ready(function() {
- $('.answer').hide();
- $('.main h2').toggle(
-		function() {
-	       $(this).next('.answer').slideDown();
-		   $(this).addClass('close');
-		},
-		function() {
-		   $(this).next('.answer').fadeOut();
-		   $(this).removeClass('close');
-	  }
-	); // end toggle
-}); // end ready
-</script>
-							</head>
-							<body>
-								<main class="grid">
-									<header  class="grid-area grid-area-1">
-										<h1>CNIT 133 Homework 7 - Object Model and Misc jQuery </h1>
-									</header>
-
-									<div class="content">
-	<div class="main">
-
-<h2>Part 1</h2>
-      <div class="answer">
-        <p>Create a <a href="hw7part1.html">webpage</a>
- in which users are allowed to select a page layout and formatting through the use of the className property. LINK</p>
-      </div>
-      <h2>Part 2</h2>
-      <div class="answer">
-        <p>Write a <a href="hw7part2.html">script</a> that displays a top navigation bar containing a link to your Homework 1 and five other links that will be to the cover page for each of your Homework2 - Homewor6 LINK</p>
-      </div>
-      
-</div>
-									<nav class="grid-area grid-area-2">
-										<ul>
-											<li>
-												<a href="homework1.html" title="CNIT 133 - homepage">
-						Return to homepage
-					</a>
-											</li>
-										</ul>
-									</nav>
-					<!-- 				<section class="grid-area grid-area-3">
-										<h2> Assignments below: </h2>
-										<ul>
-											<li>
-												<a href="hw7part1.html" title="Part 1">
-						Part 1
-					</a>
-											</li>
-											<li>
-												<a href="hw7part2.html" title="Part 2">
-						Part 2
-					</a>
-											</li>
-					
-					
-										</ul>
-									</section> -->
-									<footer class="grid-area grid-area-4">
-										<p>
-					&#169; 2020 Kristian Reyes 
-				</p>
-									</footer>
-								</main>
-							</body>
-						</html>
+   <head>
+      <!--Kristian Reyes 11/22/2020 -->
+      <title>CNIT 133 Homework </title>
+      <meta charset="utf-8">
+      <meta name="description" content="homework 7 for CCSF CNIT 133">
+      <meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
+      <meta name="author" content="Kristian Reyes">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--bootstrap 	 -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--bootstrap 	 -->
+      <script  src="https://code.jquery.com/jquery-1.7.1.js"></script>
+      <script>
+         $(document).ready(function() {
+          $('.answer').hide();
+          $('.main h2').toggle(
+         		function() {
+         	       $(this).next('.answer').slideDown();
+         		   $(this).addClass('close');
+         		},
+         		function() {
+         		   $(this).next('.answer').fadeOut();
+         		   $(this).removeClass('close');
+         	  }
+         	); // end toggle
+         }); // end ready
+      </script>
+   </head>
+   <body>
+      <main class="grid">
+         <header  class="grid-area grid-area-1">
+            <h1>CNIT 133 Homework 7 - Object Model and Misc jQuery </h1>
+         </header>
+         <div class="content">
+            <div class="main">
+               <h2>Part 1</h2>
+               <div class="answer">
+                  <p>Create a <a href="hw7part1.html">webpage</a>
+                     in which users are allowed to select a page layout and formatting through the use of the className property.
+                  </p>
+               </div>
+               <h2>Part 2</h2>
+               <div class="answer">
+                  <p>Write a <a href="hw7part2.html">script</a> that displays a top navigation bar containing a link to your Homework 1 and five other links that will be to the cover page for each of your Homework2 - Homework6.</p>
+               </div>
+            </div>
+         </div>
+         <nav class="grid-area grid-area-2">
+            <ul>
+               <li>
+                  <a href="homework1.html" title="CNIT 133 - homepage">
+                  Return to homepage
+                  </a>
+               </li>
+            </ul>
+         </nav>
+         <!-- 				<section class="grid-area grid-area-3">
+            <h2> Assignments below: </h2>
+            <ul>
+            	<li>
+            		<a href="hw7part1.html" title="Part 1">
+            Part 1
+            </a>
+            	</li>
+            	<li>
+            		<a href="hw7part2.html" title="Part 2">
+            Part 2
+            </a>
+            	</li>
+            
+            
+            </ul>
+            </section> -->
+         <footer class="grid-area grid-area-4">
+            <p>
+               &#169; 2020 Kristian Reyes 
+            </p>
+         </footer>
+      </main>
+   </body>
+</html>

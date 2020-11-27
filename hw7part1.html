@@ -14,112 +14,97 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <!--bootstrap    -->
-      
-     <script>
-       
-function switchFontFamily(font) 
-{
-    var body = document.getElementById("body");
-    if(font == 0) {
-        body.className = "arialFont";
-    }
-    else if(font == 1) {
-        body.className = "courierFont";
-    }
-    else if(font == 2) {
-        body.className = "impactFont";
-    }
-}
-
-
-
-function switchFontFormat(format) 
-{
-    var body = document.getElementById("body");
-    if(format == 0) {
-        body.className = "bold";
-    }
-    else if(format == 1) {
-        body.className = "italic";
-    }
-
-}
-
-function switchToBase()
-{
-    
-    var origbody = document.getElementById("body");
-    origbody.className = "originalBody";
-
-   
-    var origTableObject = document.getElementById("originalTable");
-    origTableObject.className = "basicTable";
-}
-
-
-function switchTblCol()
-{      
-    var origTableObject = document.getElementById("originalTable");    
-    var selectedFontSize = document.getElementById('fontSizeDropDown').value;
+      <script>
+         function switchFontFamily(font) 
+         {
+             var body = document.getElementById("body");
+             if(font == 0) {
+                 body.className = "arialFont";
+             }
+             else if(font == 1) {
+                 body.className = "courierFont";
+             }
+             else if(font == 2) {
+                 body.className = "impactFont";
+             }
+         }
+         
+         
+         
+         function switchFontFormat(format) 
+         {
+             var body = document.getElementById("body");
+             if(format == 0) {
+                 body.className = "bold";
+             }
+             else if(format == 1) {
+                 body.className = "italic";
+             }
+         
+         }
+         
+         function switchToBase()
+         {
+             
+             var origbody = document.getElementById("body");
+             origbody.className = "originalBody";
+         
             
-    if (selectedFontSize == "teal")
-    {
-        origTableObject.className = "teal basicTable";
-    }
-    else if (selectedFontSize == "orange")
-    {
-        origTableObject.className = "orange basicTable";
-    }
-    else if (selectedFontSize == "marron")
-    {
-        origTableObject.className = "marron basicTable";
-    }           
-} 
-
-     </script>
-
-
-
-     <style>
-
-.arialFont {
-    font-family: Arial;
-  }
-
-  .courierFont {
-    font-family: Courier;
-  }
-    .impactFont {
-    font-family: Impact;
-  }
-
-
-
-.bold {font-weight:bold;}
-.italic {font-style:italic;}
-
-.teal {
-    background-color: #5dbcd2;
-}
-.orange {
-    background-color: #e07b39;
-}
-.marron {
-    background-color: #80391e;
-}
-  .originalBody {
-
-     background-color: #ffffff;  
-     font-family: Futura;
-     color: #001234; 
-}
-     </style>
-   
+             var origTableObject = document.getElementById("originalTable");
+             origTableObject.className = "basicTable";
+         }
+         
+         
+         function switchTblCol()
+         {      
+             var origTableObject = document.getElementById("originalTable");    
+             var selectedFontSize = document.getElementById('fontSizeDropDown').value;
+                     
+             if (selectedFontSize == "teal")
+             {
+                 origTableObject.className = "teal basicTable";
+             }
+             else if (selectedFontSize == "orange")
+             {
+                 origTableObject.className = "orange basicTable";
+             }
+             else if (selectedFontSize == "marron")
+             {
+                 origTableObject.className = "marron basicTable";
+             }           
+         } 
+         
+              
+      </script>
+      <style>
+         .arialFont {
+         font-family: Arial;
+         }
+         .courierFont {
+         font-family: Courier;
+         }
+         .impactFont {
+         font-family: Impact;
+         }
+         .bold {font-weight:bold;}
+         .italic {font-style:italic;}
+         .teal {
+         background-color: #5dbcd2;
+         }
+         .orange {
+         background-color: #e07b39;
+         }
+         .marron {
+         background-color: #80391e;
+         }
+         .originalBody {
+         background-color: #ffffff;  
+         font-family: Futura;
+         color: #001234; 
+         }
+      </style>
    </head>
-
-
- 
-<body id="body" class="originalBody">
+   <body id="body" class="originalBody">
       <main class="grid">
          <header  class="grid-area grid-area-1">
             <h2> Homework 7 - Part 1 </h2>
@@ -135,70 +120,42 @@ function switchTblCol()
          </nav>
          <section id="content" class="grid-area grid-area-3">
             <h2> Part 1</h2>
-
-
-
-
-<h2>ClassName </h2>
-
-
-
-<form name="myform">
-<p class="main"><b>Instantly customize the page:</b></p>
-<br>
-<table class="basicTable" id="originalTable">
-
-<tr>
-
-<td>
-Choose font family:<br>
-<input type="radio" name="fstyle" onclick="switchFontFamily(0)">Arial
-<input type="radio" name="fstyle" onclick="switchFontFamily(1)">Courier
-<input type="radio" name="fstyle" onclick="switchFontFamily(2)">Impact
-</td>
-</tr>
-
-
-<tr>
-
-<td>
-Select table background color: <br>
-<select name="fontcDropDown" id="fontSizeDropDown" onchange="switchTblCol()">
-
-<option  value="#">--Select table background color--</option> 
-<option value="teal">Teal</option>                         
-<option value="orange">Orange</option>                        
-<option value="marron">Marron</option>       
-</select>
-</td>
-</tr>
-
-
-<tr>
-
-<td>
-Select a font style:
-  <input type="button" value="Bold" onclick="switchFontFormat(0)">
-  <input type="button" value="Italic" onclick="switchFontFormat(1)">
-</td>
-
-</tr>
-
-
-</table>
-</form>
-
-<br>
-<input type="button" value="Revert to original"  onclick=" switchToBase()">
-     
-</section>
-
-
-     
-
-
-
- 
+            <h2>ClassName </h2>
+            <form name="myform">
+               <p class="main"><b>Instantly customize the page:</b></p>
+               <br>
+               <table class="basicTable" id="originalTable">
+                  <tr>
+                     <td>
+                        Choose font family:<br>
+                        <input type="radio" name="fstyle" onclick="switchFontFamily(0)">Arial
+                        <input type="radio" name="fstyle" onclick="switchFontFamily(1)">Courier
+                        <input type="radio" name="fstyle" onclick="switchFontFamily(2)">Impact
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        Select table background color: <br>
+                        <select name="fontcDropDown" id="fontSizeDropDown" onchange="switchTblCol()">
+                           <option  value="#">--Select table background color--</option>
+                           <option value="teal">Teal</option>
+                           <option value="orange">Orange</option>
+                           <option value="marron">Marron</option>
+                        </select>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        Select a font style:
+                        <input type="button" value="Bold" onclick="switchFontFormat(0)">
+                        <input type="button" value="Italic" onclick="switchFontFormat(1)">
+                     </td>
+                  </tr>
+               </table>
+            </form>
+            <br>
+            <input type="button" value="Revert to original"  onclick=" switchToBase()">
+         </section>
          <footer class="grid-area grid-area-4">
             <p>
                &#169; 2020 Kristian Reyes 
