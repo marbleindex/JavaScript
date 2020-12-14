@@ -1,62 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>	
-	<!--Kristian Reyes 8/25/2020 -->
-
-	<title>CNIT 133 Homework 8</title>
-	<meta charset="utf-8">
-	<meta name="description" content="homework 8 for CCSF CNIT 133">
-	<meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
-	<meta name="author" content="Kristian Reyes">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!--bootstrap 	 -->
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	
-	<!--bootstrap 	 -->
-
-	<!-- <link rel="stylesheet" href="style.css"> -->
-</head>
-
-<body>
-	<main class="grid">
-		<header  class="grid-area grid-area-1">
-			<h1>Kristian Reyes - CNIT133 </h1>
-		</header>
-
-		<nav class="grid-area grid-area-2">
-			<ul>                                                                    
-				<li>
-					<a href="homework1.html" title="CNIT 133 - homepage">
-						Return to homepage
-					</a>
-				</li>
-			</ul>
-			                                                                     
-			
-		</nav>
-
-
-		<section class="grid-area grid-area-3">
-
-			<h2> This is a placeholder until the assignment has been completed :) </h2>
-
-			</section>
-
-
-		
-					<footer class="grid-area grid-area-4">
-				<p>
-					&#169; 2020 Kristian Reyes 
-				</p>
-
-			</footer>
-
-		</main>			
-	</body>
-	</html>
+   <head>
+      <!--Kristian Reyes 12/12/2020 -->
+      <title>CNIT 133 Homework 8 </title>
+      <meta charset="utf-8">
+      <meta name="description" content="homework 8 for CCSF CNIT 133">
+      <meta name="keywords" content="HTML, CSS, Javascript, CCSF, Student">
+      <meta name="author" content="Kristian Reyes">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--bootstrap   -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--bootstrap   -->
+      <script  src="https://code.jquery.com/jquery-1.7.1.js"></script>
+      <script>
+         function showHint(str) {
+           if (str.length == 0) {
+             document.getElementById("suggestHint").innerHTML = "";
+             return;
+           } else {
+             var xmlhttp = new XMLHttpRequest();
+             xmlhttp.onreadystatechange = function() {
+               if (this.readyState == 4 && this.status == 200) {
+                 document.getElementById("suggestHint").innerHTML = this.responseText;
+               }
+             };
+             xmlhttp.open("GET", "gethint.php?q=" + str, true);
+             xmlhttp.send();
+           }
+         }
+         
+         
+               
+      </script>
+   </head>
+   <body>
+      <main class="grid">
+         <header  class="grid-area grid-area-1">
+            <h1>CNIT 133 Homework 8 - AJAX Applications </h1>
+         </header>
+         <h2> AJAX - Name Search </h2>
+         <p><b>Start typing a name in the input field below:</b></p>
+         <form action="#">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" onkeyup="showHint(this.value)">
+         </form>
+         <p>Suggestions: <span id="suggestHint"></span></p>
+         <h2> Spotify Web API </h2>
+         <p>
+            The <a href="https://developer.spotify.com/documentation/web-api/">Spotify Web API</a> allows search and lookup of metadata about artists, tracks, and albums. The Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue. The API also provides access to user related data such as playlists and music saved under libraries. The Spotify Web API is based on REST principles and uses the following methods: GET, POST, PUT, DELETE. oAuth 2.0 authentation is required to access and use the Spotify Web API.
+         </p>
+         <nav class="grid-area grid-area-2">
+            <ul>
+               <li>
+                  <a href="https://marbleindex.github.io/homework1.html" title="CNIT 133 - homepage">
+                  Return to homepage
+                  </a>
+               </li>
+            </ul>
+         </nav>
+         
+         <footer class="grid-area grid-area-4">
+            <p>
+               &#169; 2020 Kristian Reyes 
+            </p>
+         </footer>
+      </main>
+   </body>
+</html>
