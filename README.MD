@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Kristian Reyes</h1>
-<h3 align="center">Welcome to my JavaScript coursework deliverable repo.</h3>
+<h3 align="center">Welcome to my JavaScript and jQuery coursework deliverable repo.</h3>
 
 - 🔭 I’m currently working **as a technical writer for a fintech company.**
 
